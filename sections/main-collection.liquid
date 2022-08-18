@@ -1,0 +1,91 @@
+<section class="product-listing">
+  <div class="container-fluid">
+    <div class="d-flex flex-lg-row flex-column">
+      <div class="flex-shrink-1">
+        <div class="side-bar-container">
+          <div class="side-bar">
+            <div class="header">
+              <h4>SHOP</h4>
+            </div>
+            <ul class="options">
+              <li class="option"><a class="link" href="{{ routes.all_products_collection_url | escape }}">ALL PRODUCTS</a></li>
+              <li class="option"><a class="link" href="/collections/essentials/">Essentials</a></li>
+              <li class="option"><a class="link" href="/collections/donut/">Donuts</a></li>
+              <li class="option"><a class="link" href="/collections/bath-bomb/">Bath Bombs</a></li>
+              <li class="option"><a class="link" href="/collections/treat/">Treats</a></li>
+              <li class="option"><a class="link" href="/collections/fragrant/">Fragrant</a></li>
+              <li class="option"><a class="link" href="/collections/figure/">Figure</a></li>
+              <li class="option"><a class="link" href="/collections/skincare/">Skincare</a></li>
+              <li class="option"><a class="link" href="/collections/massage/">Massage</a></li>
+              <li class="option"><a class="link" href="/collections/bath-salts/">Bath Salts</a></li>
+              <li class="option"><a class="link" href="/collections/beard/">Beard</a></li>
+              <li class="option"><a class="link" href="/collections/gift/">Gifts</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="flex-grow-1">
+        <div class="listing-main">
+          <div class="entry-header">
+          {%- if collection.title != 'Products' -%}
+            <h2 class="title">{{- collection.title | escape -}}</h2>
+          {%- else -%}
+            <h2 class="title">{{ 'All Products' | escape }}</h2>
+          {%- endif -%}
+          </div>
+          {%- paginate collection.products by 9 -%}
+            {%- if collection.products.size == 0 -%}
+              <div class="products">
+                <div class="alert alert-info" role="alert" style="">No products found</div>
+              </div>
+            {%- else -%}
+              <div class="products">
+                <div class="row gx-2 gx-lg-4">
+                  {%- for product in collection.products -%}
+                    <div class="col-xl-4 col-md-4 col-6">
+                      <div class="box">
+                        <div class="product">
+                          <div class="product-img">
+                            <img src="{{ product.featured_media | image_url }}" alt="{{ product.title | escape }}" loading="lazy" class="img-fluid" width="" height="" />
+                          </div>
+                          <div class="content">
+                            <h5 class="title">{{ product.title | escape }}</h5>
+                            <h6 class="price">{{ product.price | money_with_currency }}</h6>
+                          </div>
+                          <div class="actions">
+                            <div class="learn-more">
+                              <a class="btn btn-demo-primary" href="{{ product.url }}">See {{ product.title | truncatewords: 2 }}</a>
+                            </div>
+                            <div class="add-to-bag">
+                              <a href="javascript: void(0)" class="btn btn-demo-secondary" data-id="{{ product.variants[0].id }}">ADD TO BAG</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  {%- endfor -%}
+                </div>
+                {%- if paginate.pages > 1 -%}
+                  <div class="pagination">
+                      <a href="{{ paginate.previous.url }}" class="btn btn-demo-primary me-4 prev {%- if paginate.previous == blank -%}{{ ' disabled' | escape }}{%- endif -%}">
+                        <svg xmlns="//www.w3.org/2000/svg" viewBox="0 0 26 13" fill="none" width="24" height="11">
+                          <path d="M25 6.5L1 6.5M1 6.5L7 1M1 6.5L7 12" stroke="#1e1e1e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                        <span class="label ms-2">PREV</span>
+                      </a>
+                    <a href="{{ paginate.next.url }}" class="btn btn-demo-primary next {%- if paginate.next == blank -%}{{ ' disabled' | escape }}{%- endif -%}">
+                      <span class="label me-2">NEXT</span>
+                      <svg xmlns="//www.w3.org/2000/svg" viewBox="0 0 26 13" fill="none" width="24" height="11">
+                        <path d="M0.999999 6.5L25 6.5M25 6.5L19 1M25 6.5L19 12" stroke="#1e1e1e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                    </a>
+                  </div>
+                {%- endif -%}
+              </div>
+            {%- endif -%}
+          {%- endpaginate -%}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

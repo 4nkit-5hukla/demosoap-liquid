@@ -1,0 +1,89 @@
+<section class="gallery-slider">
+  <div class="container-fluid">
+    <h2 class="entry-title">{{ section.settings.section_title | escape }}</h2>
+    <div class="slider">
+      <div class="swiper gallery-swiper">
+        <div class="swiper-wrapper">
+          {%- for block in section.blocks -%}
+          <div class="swiper-slide">
+            <div class="gallery-slide">
+              <div class="slider-content text-center">
+                <div class="gallery-image">
+                  {%- if block.settings.slide_image != blank -%}
+                    {{ block.settings.slide_image | image_url: width: 291 | image_tag:
+                      loading: 'lazy',
+                      width: 291,
+                      height: 220,
+                      alt: block.settings.slide_image.alt | escape
+                    }}
+                  {%- else -%}
+                    {% assign slide = "gallery#.jpg" | replace: "#", forloop.index %}
+                    <img src="{{ slide | asset_img_url: '291x' }}" alt="{{ slide }}" width="291" height="220" loading="lazy" />
+                  {%- endif -%}
+                </div>
+              </div>
+            </div>
+          </div>
+          {%- endfor -%}
+        </div>
+      </div>
+      <div class="slider-nav">
+        <button class="btn-swiper prev-icon" aria-label="Slide Left">
+          <svg xmlns="//www.w3.org/2000/svg" viewBox="0 0 69 23" fill="none" width="70" height="21">
+            <path d="M68.976 10.6997L2.15546 10.6997" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="bevel"></path>
+            <path d="M68.976 10.6997L2.15546 10.6997" stroke="#1E1E1E" stroke-linecap="round" stroke-linejoin="bevel"></path>
+            <path d="M10.6997 1L0.999959 10.6997L10.6997 20.3995" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="bevel"></path>
+            <path d="M10.6997 1L0.999959 10.6997L10.6997 20.3995" stroke="#1E1E1E" stroke-linecap="round" stroke-linejoin="bevel"></path>
+          </svg>
+        </button>
+        <button class="btn-swiper next-icon" aria-label="Slide Right">
+          <svg xmlns="//www.w3.org/2000/svg" viewBox="0 0 69 23" fill="none" width="70" height="21">
+            <path d="M0.976074 10.6997L67.7966 10.6997" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="bevel"></path>
+            <path d="M0.976074 10.6997L67.7966 10.6997" stroke="#1E1E1E" stroke-linecap="round" stroke-linejoin="bevel"></path>
+            <path d="M59.2522 20.3994L68.9519 10.6997L59.2522 0.999919" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="bevel"></path>
+            <path d="M59.2522 20.3994L68.9519 10.6997L59.2522 0.999919" stroke="#1E1E1E" stroke-linecap="round" stroke-linejoin="bevel"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+{% schema %}
+{
+  "name": "Gallery Section",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Section Title",
+      "default": "GALLERY"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "Gallery Slide",
+      "limit": 4,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "slide_image",
+          "label": "Slide Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Gallery Section",
+      "blocks": [
+        {
+          "type": "slide"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

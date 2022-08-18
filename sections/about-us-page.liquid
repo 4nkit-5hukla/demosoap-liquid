@@ -1,0 +1,153 @@
+<section class="about-us">
+  <div class="inner-wrapper">
+    <div class="row gx-0 section1">
+      <div class="col col-12 col-lg-6 text-col">
+        <div class="about-us-left">
+          <div class="left-content">
+            <h1>{{ section.settings.section_title | escape }}</h1>
+            {{ section.blocks[0].settings.section_content }}
+          </div>
+        </div>
+      </div>
+      <div class="col col-12 col-lg-6 img-col">
+        <div class="about-us-right">
+          <div class="w-100">
+            {%- if section.blocks[0].settings.section_image != blank -%}
+              {{ section.blocks[0].settings.section_image | image_url: width: 1440 | image_tag:
+                loading: 'lazy',
+                width: 1440,
+                height: 1174,
+                class: "img-fluid",
+                alt: section.blocks[0].settings.section_image.alt | escape
+              }}
+            {%- else -%}
+              <img src="{{ 'about1.jpg' | asset_img_url: 'original' }}" alt="{{ 'about1' }}" width="1440" height="1174" loading="lazy" class="img-fluid" />
+            {%- endif -%}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row gx-0 section2">
+      <div class="col col-12 col-lg-6 order-2 order-lg-1 img-col">
+        <div class="about-us-right">
+          <div class="w-100">
+            {%- if section.blocks[1].settings.section_image != blank -%}
+              {{ section.blocks[1].settings.section_image | image_url: width: 1440 | image_tag:
+                loading: 'lazy',
+                width: 1440,
+                height: 1174,
+                class: "img-fluid",
+                alt: section.blocks[1].settings.section_image.alt | escape
+              }}
+            {%- else -%}
+              <img src="{{ 'about2.jpg' | asset_img_url: 'original' }}" alt="{{ 'about2' }}" width="1440" height="1174" loading="lazy" class="img-fluid" />
+            {%- endif -%}
+          </div>
+        </div>
+      </div>
+      <div class="col col-12 col-lg-6 order-1 order-lg-2 text-col">
+        <div class="about-us-left">
+          <div class="content">
+            {{ section.blocks[1].settings.section_content }}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row gx-0 section3">
+      <div class="col col-12 col-lg-6 text-col">
+        <div class="about-us-left">
+          <div class="left-content">
+            {{ section.blocks[2].settings.section_content }}
+          </div>
+        </div>
+      </div>
+      <div class="col col-12 col-lg-6 img-col">
+        <div class="about-us-right">
+          <div class="w-100">
+            {%- if section.blocks[2].settings.section_image != blank -%}
+              {{ section.blocks[2].settings.section_image | image_url: width: 1440 | image_tag:
+                loading: 'lazy',
+                width: 1440,
+                height: 1174,
+                class: "img-fluid",
+                alt: section.blocks[2].settings.section_image.alt | escape
+              }}
+            {%- else -%}
+              <img src="{{ 'about3.jpg' | asset_img_url: 'original' }}" alt="{{ 'about3' }}" width="1440" height="1174" loading="lazy" class="img-fluid" />
+            {%- endif -%}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row gx-0 section4">
+      <div class="col col-12 col-lg-6 order-2 order-lg-1 img-col">
+        <div class="about-us-right">
+          <div class="w-100">
+            {%- if section.blocks[3].settings.section_image != blank -%}
+              {{ section.blocks[3].settings.section_image | image_url: width: 1440 | image_tag:
+                loading: 'lazy',
+                width: 1440,
+                height: 1174,
+                class: "img-fluid",
+                alt: section.blocks[3].settings.section_image.alt | escape
+              }}
+            {%- else -%}
+              <img src="{{ 'about4.jpg' | asset_img_url: 'original' }}" alt="{{ 'about4' }}" width="1440" height="1174" loading="lazy" class="img-fluid" />
+            {%- endif -%}
+          </div>
+        </div>
+      </div>
+      <div class="col col-12 col-lg-6 order-1 order-lg-2 text-col">
+        <div class="about-us-left">
+          <div class="content">
+            {{ section.blocks[3].settings.section_content }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% schema %}
+{
+  "name": "About Us Page",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Section Title",
+      "default": "ABOUT US"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "about-section",
+      "name": "About Section",
+      "limit": 4,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "section_image",
+          "label": "Section Image"
+        },
+        {
+          "type": "html",
+          "id": "section_content",
+          "label": "Section Content"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "About Us Page",
+      "blocks": [
+        {
+          "type": "about-section"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

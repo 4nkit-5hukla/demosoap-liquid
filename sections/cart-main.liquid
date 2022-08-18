@@ -1,0 +1,150 @@
+<section class="cart-page">
+  {%- if cart == empty -%}
+    <div class="empty-cart">
+      <h3>Your cart is currently empty.</h3>
+      <a class="btn btn-demo-secondary" href="{{ routes.all_products_collection_url | escape }}">RETURN TO SHOP PAGE</a>
+    </div>
+  {%- else -%}
+    <div class="entry-title">
+      <div class="container-fluid">
+        <div class="title-area d-block d-lg-flex flex-row">
+          <div class="shopping-cart">
+            <div class="cart-title">
+              <h2>SHOPPING CART</h2>
+            </div>
+          </div>
+          <div class="order-summary d-none d-lg-block">
+            <div class="summary-title">
+              <h2>order summary</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cart-inner">
+      <div class="container-fluid">
+        <div class="cart-data d-block d-lg-flex flex-row">
+          <div class="shopping-cart">
+            <div class="shopping-cart-data">
+                {%- for item in cart.items -%}
+                  <div class="item-row d-flex flex-row" id="CartItem-{{ item.index | plus: 1 }}">
+                    {% if item.image %}
+                      <a href="{{ item.url }}" class="item-meta">
+                        <div class="item-image">
+                          <img src="{{ item.image | image_url: width: 140 }}"
+                            class="cart-item__image"
+                            alt="{{ item.image.alt | escape }}"
+                            loading="lazy"
+                            width="150"
+                            height="{{ 140 | divided_by: item.image.aspect_ratio | ceil }}"
+                          >
+                        </div>
+                      </a>
+                    {% endif %}
+                    <div class="item-data d-flex">
+                      <div class="item-details">
+                        <div class="details">
+                          <p class="item-title">{{ item.product.title | escape }}</p>
+                          {%- if item.original_price != item.final_price -%}
+                            <p class="price">
+                              <span class="visually-hidden">
+                                {{ 'Regular Price ' }}
+                              </span>
+                              <s>
+                                {{- item.original_price | money -}}
+                              </s>
+                              <span class="visually-hidden">
+                                {{ ' Sale Price ' }}
+                              </span>
+                              <strong>
+                                {{ item.final_price | money }}
+                              </strong>
+                            </p>
+                          {%- else -%}
+                            <p class="price">
+                              {{ 'Price ' }}<span>{{ item.original_price | money }}</span>
+                            </p>
+                          {%- endif -%}
+                          <div class="quantity-selector">
+                            <button type="button" class="btn-quantity minus" aria-label="Quantity Minus">
+                              <svg xmlns="//www.w3.org/2000/svg" viewBox="0 0 19 2" fill="none">
+                                <rect x="18.5" y="0.5" width="1" height="18" rx="0.5" transform="rotate(90 18.5 0.5)" fill="#1E1E1E"></rect>
+                              </svg>
+                            </button>
+                            <span class="quantity-value">1</span>
+                            <button type="button" class="btn-quantity plus" aria-label="Quantity Plus">
+                              <svg xmlns="//www.w3.org/2000/svg"
+                                viewBox="0 0 19 18" fill="none">
+                                <rect x="9" width="1" height="18" rx="0.5" fill="#1E1E1E"></rect>
+                                <rect x="18.5" y="8.5" width="1" height="18" rx="0.5" transform="rotate(90 18.5 8.5)" fill="#1E1E1E"></rect>
+                              </svg>
+                            </button>
+                          </div>
+                          {%- if item.original_line_price != item.final_line_price -%}
+                            <p class="subtotal">
+                              <span class="visually-hidden">
+                                {{ 'Regular ' }}
+                              </span>
+                              <s>
+                                {{ item.original_line_price | money }}
+                              </s>
+                              <span class="visually-hidden">
+                                {{ 'Sale ' }}
+                              </span>
+                              <strong>
+                                {{ item.final_line_price | money }}
+                              </strong>
+                            </p>
+                          {%- else -%}
+                            <p class="subtotal">
+                              {{ 'Subtotal ' }}<span>{{ item.original_line_price | money }}</span>
+                            </p>
+                          {%- endif -%}
+                        </div>
+                        <div class="remove-item">
+                          <a href="{{ item.url_to_remove }}" class="remove-btn">
+                            <svg xmlns="//www.w3.org/2000/svg" viewBox="0 0 26 26" fill="none">
+                              <rect x="18.7383" y="6.01044" width="1" height="18" rx="0.5" transform="rotate(45 18.7383 6.01044)" fill="#1E1E1E"></rect>
+                              <rect x="19.4453" y="18.7383" width="1" height="18" rx="0.5" transform="rotate(135 19.4453 18.7383)" fill="#1E1E1E"></rect>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                {%- endfor -%}
+            </div>
+          </div>
+          <hr>
+          <div class="order-summary">
+            <div class="summary-data">
+              <div class="subtotal-box">
+                <h3>ORDER SUMMARY</h3>
+                <ul>
+                  <li>Subtotal: <span>{{ cart.items_subtotal_price | money_with_currency }}</span></li>
+                  <li>
+                    <small>
+                      {%- if cart.taxes_included and shop.shipping_policy.body != blank -%}
+                        {{ 'sections.cart.taxes_included_and_shipping_policy_html' | t: link: shop.shipping_policy.url }}
+                      {%- elsif cart.taxes_included -%}
+                        {{ 'sections.cart.taxes_included_but_shipping_at_checkout' | t }}
+                      {%- elsif shop.shipping_policy.body != blank -%}
+                        {{ 'sections.cart.taxes_and_shipping_policy_at_checkout_html' | t: link: shop.shipping_policy.url }}
+                      {%- else -%}
+                        {{ 'sections.cart.taxes_and_shipping_at_checkout' | t }}
+                      {%- endif -%}
+                    </small>
+                  </li>
+                  <li>Estimated Total: <span>{{ cart.total_price | money_with_currency }}</span></li>
+                </ul>
+                <form action="/cart" method="post" class="row mx-0 checkout-btn">
+                  <button class="btn btn-demo-primary" type="submit" name="checkout" value="Checkout">CHECKOUT</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  {%- endif -%}
+</section>

@@ -1,0 +1,258 @@
+<section class="blogs-slider">
+  <div class="wrapper">
+    <h2 class="entry-title">{{ section.settings.section_title | escape }}</h2>
+    <div class="slider">
+      <div class="swiper blogs-swiper">
+        <div class="swiper-wrapper">
+          {%- if section.settings.article1 != blank -%}
+            <div class="swiper-slide">
+              <div class="product-slide">
+                <div class="slider-content text-center">
+                  <div class="product-image">
+                    <a title="Slide-1" href="{{ section.settings.article1.url }}">
+                      {{ section.settings.article1.image | image_url: height: 300, width: 300, crop: 'top' | image_tag:
+                        loading: 'lazy',
+                        width: 300,
+                        height: 300,
+                        alt: section.settings.article1.image.alt | escape
+                      }}
+                    </a>
+                  </div>
+                  <div class="product-title">
+                    <div class="meta-data">By <strong>{{ section.settings.article1.author }}</strong> on<span> {{ section.settings.article1.updated_at | date: format: 'abbreviated_date' }}</span></div>
+                    <p>
+                      <a href="{{ section.settings.article1.url }}">{{ section.settings.article1.title }}</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          {% else %}
+          {% assign article = articles['all/thank-you-scarborough-general-hospital-icu-team'] %}
+            <div class="swiper-slide">
+              <div class="product-slide">
+                <div class="slider-content text-center">
+                  <div class="product-image">
+                    <a title="Slide-1" href="{{ article.url }}">
+                      {{ article.image | image_url: height: 300, width: 300, crop: 'top' | image_tag:
+                        loading: 'lazy',
+                        width: 300,
+                        height: 300,
+                        alt: article.image.alt | escape
+                      }}
+                    </a>
+                  </div>
+                  <div class="product-title">
+                    <div class="meta-data">By <strong>{{ article.author }}</strong> on<span> {{ article.updated_at | date: format: 'abbreviated_date' }}</span></div>
+                    <p>
+                      <a href="{{ article.url }}">{{ article.title }}</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          {%- endif -%}
+          {%- if section.settings.article2 != blank -%}
+            <div class="swiper-slide">
+              <div class="product-slide">
+                <div class="slider-content text-center">
+                  <div class="product-image">
+                    <a title="Slide-1" href="{{ section.settings.article2.url }}">
+                      {{ section.settings.article2.image | image_url: height: 300, width: 300, crop: 'top' | image_tag:
+                        loading: 'lazy',
+                        width: 300,
+                        height: 300,
+                        alt: section.settings.article2.image.alt | escape
+                      }}
+                    </a>
+                  </div>
+                  <div class="product-title">
+                    <div class="meta-data">By <strong>{{ section.settings.article2.author }}</strong> on<span> {{ section.settings.article2.updated_at | date: format: 'abbreviated_date' }}</span></div>
+                    <p>
+                      <a href="{{ section.settings.article2.url }}">{{ section.settings.article2.title }}</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          {% else %}
+          {% assign article = articles['all/foster-care-hope-bags'] %}
+            <div class="swiper-slide">
+              <div class="product-slide">
+                <div class="slider-content text-center">
+                  <div class="product-image">
+                    <a title="Slide-1" href="{{ article.url }}">
+                      {{ article.image | image_url: height: 300, width: 300, crop: 'top' | image_tag:
+                        loading: 'lazy',
+                        width: 300,
+                        height: 300,
+                        alt: article.image.alt | escape
+                      }}
+                    </a>
+                  </div>
+                  <div class="product-title">
+                    <div class="meta-data">By <strong>{{ article.author }}</strong> on<span> {{ article.updated_at | date: format: 'abbreviated_date' }}</span></div>
+                    <p>
+                      <a href="{{ article.url }}">{{ article.title }}</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          {%- endif -%}
+          {%- if section.settings.article3 != blank -%}
+            <div class="swiper-slide">
+              <div class="product-slide">
+                <div class="slider-content text-center">
+                  <div class="product-image">
+                    <a title="Slide-1" href="{{ section.settings.article3.url }}">
+                      {{ section.settings.article3.image | image_url: height: 300, width: 300, crop: 'top' | image_tag:
+                        loading: 'lazy',
+                        width: 300,
+                        height: 300,
+                        alt: section.settings.article3.image.alt | escape
+                      }}
+                    </a>
+                  </div>
+                  <div class="product-title">
+                    <div class="meta-data">By <strong>{{ section.settings.article3.author }}</strong> on<span> {{ section.settings.article3.updated_at | date: format: 'abbreviated_date' }}</span></div>
+                    <p>
+                      <a href="{{ section.settings.article3.url }}">{{ section.settings.article3.title }}</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          {% else %}
+          {% assign article = articles['all/benefits-of-jojoba-oil-and-why-we-use-it'] %}
+            <div class="swiper-slide">
+              <div class="product-slide">
+                <div class="slider-content text-center">
+                  <div class="product-image">
+                    <a title="Slide-1" href="{{ article.url }}">
+                      {{ article.image | image_url: height: 300, width: 300, crop: 'top' | image_tag:
+                        loading: 'lazy',
+                        width: 300,
+                        height: 300,
+                        alt: article.image.alt | escape
+                      }}
+                    </a>
+                  </div>
+                  <div class="product-title">
+                    <div class="meta-data">By <strong>{{ article.author }}</strong> on<span> {{ article.updated_at | date: format: 'abbreviated_date' }}</span></div>
+                    <p>
+                      <a href="{{ article.url }}">{{ article.title }}</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          {%- endif -%}
+          {%- if section.settings.article4 != blank -%}
+            <div class="swiper-slide">
+              <div class="product-slide">
+                <div class="slider-content text-center">
+                  <div class="product-image">
+                    <a title="Slide-1" href="{{ section.settings.article4.url }}">
+                      {{ section.settings.article4.image | image_url: height: 300, width: 300, crop: 'top' | image_tag:
+                        loading: 'lazy',
+                        width: 300,
+                        height: 300,
+                        alt: section.settings.article4.image.alt | escape
+                      }}
+                    </a>
+                  </div>
+                  <div class="product-title">
+                    <div class="meta-data">By <strong>{{ section.settings.article4.author }}</strong> on<span> {{ section.settings.article4.updated_at | date: format: 'abbreviated_date' }}</span></div>
+                    <p>
+                      <a href="{{ section.settings.article4.url }}">{{ section.settings.article4.title }}</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          {% else %}
+          {% assign article = articles['all/thank-you-to-all-the-front-line-workers'] %}
+            <div class="swiper-slide">
+              <div class="product-slide">
+                <div class="slider-content text-center">
+                  <div class="product-image">
+                    <a title="Slide-1" href="{{ article.url }}">
+                      {{ article.image | image_url: height: 300, width: 300, crop: 'top' | image_tag:
+                        loading: 'lazy',
+                        width: 300,
+                        height: 300,
+                        alt: article.image.alt | escape
+                      }}
+                    </a>
+                  </div>
+                  <div class="product-title">
+                    <div class="meta-data">By <strong>{{ article.author }}</strong> on<span> {{ article.updated_at | date: format: 'abbreviated_date' }}</span></div>
+                    <p>
+                      <a href="{{ article.url }}">{{ article.title }}</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          {%- endif -%}
+        </div>
+      </div>
+      <div class="slider-nav">
+        <button class="btn-swiper prev-icon swiper-button-disabled swiper-button-lock" aria-label="Slide Left" disabled="">
+          <svg xmlns="//www.w3.org/2000/svg" viewBox="0 0 69 23"
+            fill="none" width="70" height="21">
+            <path d="M68.976 10.6997L2.15546 10.6997" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="bevel"></path>
+            <path d="M68.976 10.6997L2.15546 10.6997" stroke="#1E1E1E" stroke-linecap="round" stroke-linejoin="bevel"></path>
+            <path d="M10.6997 1L0.999959 10.6997L10.6997 20.3995" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="bevel"></path>
+            <path d="M10.6997 1L0.999959 10.6997L10.6997 20.3995" stroke="#1E1E1E" stroke-linecap="round" stroke-linejoin="bevel"></path>
+          </svg>
+        </button>
+        <button class="btn-swiper next-icon swiper-button-disabled swiper-button-lock" aria-label="Slide Right" disabled="">
+          <svg xmlns="//www.w3.org/2000/svg" viewBox="0 0 69 23"
+            fill="none" width="70" height="21">
+            <path d="M0.976074 10.6997L67.7966 10.6997" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="bevel"></path>
+            <path d="M0.976074 10.6997L67.7966 10.6997" stroke="#1E1E1E" stroke-linecap="round" stroke-linejoin="bevel"></path>
+            <path d="M59.2522 20.3994L68.9519 10.6997L59.2522 0.999919" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="bevel"></path>
+            <path d="M59.2522 20.3994L68.9519 10.6997L59.2522 0.999919" stroke="#1E1E1E" stroke-linecap="round" stroke-linejoin="bevel"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+{% schema %}
+{
+  "name": "Blogs Slider",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Section Title",
+      "default": "OUR BLOG"
+    },
+    {
+      "type": "article",
+      "id": "article1",
+      "label": "Article 1"
+    },
+    {
+      "type": "article",
+      "id": "article2",
+      "label": "Article 2"
+    },
+    {
+      "type": "article",
+      "id": "article3",
+      "label": "Article 3"
+    },
+    {
+      "type": "article",
+      "id": "article4",
+      "label": "Article 4"
+    }
+  ]
+}
+{% endschema %}

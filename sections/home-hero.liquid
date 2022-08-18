@@ -1,0 +1,170 @@
+<section class="hero">
+  <div class="wrapper">
+    <div class="hero-content row gx-0">
+      <div class="col-lg-4">
+        <div class="banner-left-part w-100 text-center">
+          <div class="banner-image">
+            {%- if section.settings.image_left != blank -%}
+              {%-liquid
+                assign image_left_height = section.settings.image_left.width | divided_by: section.settings.image_left.aspect_ratio
+              -%}
+              {{ section.settings.image_left | image_url: width: 634 | image_tag:
+                loading: 'lazy',
+                width: section.settings.image_left.width,
+                height: image_left_height,
+                class: "h-auto",
+                alt: "Hero Left" | escape
+              }}
+              {%- else -%}
+              <img src="{{ 'hero-left-lg.jpg' | asset_img_url: 'original' }}" alt="Hero Left" width="634" height="725.0" loading="lazy" class="h-auto" />
+            {%- endif -%}
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="banner-middle-part">
+          <div class="banner-middle-content">
+            {%- for block in section.blocks -%}
+              {%- case block.type -%}
+                {%- when 'heading' -%}
+                  <h1 class="text-center">
+                    {{ block.settings.heading1 | escape }} <span class="d-block">{{ block.settings.heading2 | escape }}</span>
+                  </h1>
+                {%- when 'text' -%}
+                  <p>
+                    <span class="d-block"><strong>{{ block.settings.strong | escape }}</strong> {{ block.settings.following | escape }} </span> {{ block.settings.new_line | escape }}
+                  </p>
+                {%- when 'button' -%}
+                  {%- if block.settings.button_label != blank -%}
+                  <a class="btn btn-demo-primary" href="{{ block.settings.button_link }}">
+                    {{ block.settings.button_label | escape }}
+                  </a>
+                  {%- endif -%}
+                {%- endcase -%}
+              {%- endfor -%}
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="banner-right-part text-center">
+          <div data-gatsby-image-wrapper="" class="gatsby-image-wrapper gatsby-image-wrapper-constrained banner-image">
+            {%- if section.settings.image_right != blank -%}
+              {%-liquid
+                assign image_right_height = section.settings.image_right.width | divided_by: section.settings.image_right.aspect_ratio
+              -%}
+              {{ section.settings.image_right | image_url: width: 634 | image_tag:
+                loading: 'lazy',
+                width: section.settings.image_right.width,
+                height: image_right_height,
+                class: "h-auto",
+                alt: section.settings.image.alt | escape
+              }}
+              {%- else -%}
+              <img src="{{ 'hero-right-lg.jpg' | asset_img_url: 'original' }}" alt="Hero Right" width="634" height="725" loading="lazy" class="h-auto" />
+            {%- endif -%}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Home Hero",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image_left",
+      "label": "Image Left"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_right",
+      "label": "Image Right"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "name": "Headings",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading1",
+          "default": "Uniquely",
+          "label": "Heading line 1"
+        },
+        {
+          "type": "text",
+          "id": "heading2",
+          "default": "handmade soaps",
+          "label": "Heading line 2"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "Text",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "strong",
+          "default": "Demosoap",
+          "label": "Strong"
+        },
+        {
+          "type": "text",
+          "id": "following",
+          "default": " is vegan, gluten free, kosher,",
+          "label": "Following"
+        },
+        {
+          "type": "text",
+          "id": "new_line",
+          "default": "hypoallergenic & biodegradable.",
+          "label": "New Line"
+        }
+      ]
+    },
+    {
+      "type": "button",
+      "name": "Button",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "button_label",
+          "default": "Browse All",
+          "label": "Button Label"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Home Hero",
+      "blocks": [
+        {
+          "type": "heading"
+        },
+        {
+          "type": "text"
+        },
+        {
+          "type": "button"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

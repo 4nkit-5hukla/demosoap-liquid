@@ -1,0 +1,94 @@
+<section class="follow-us">
+  <div class="follow-us-content">
+    <div class="row gx-0">
+      <div class="col col-12 col-lg-6">
+        <div class="follow-left-part">
+          <div class="banner-image w-100">
+            {%- if section.settings.section_image != blank -%}
+              {{ section.settings.section_image | image_url: width: 950 | image_tag:
+                loading: 'lazy',
+                width: 950,
+                height: 950 | divided_by: section.settings.section_image.aspect_ratio,
+                class: "h-auto",
+                alt: "Hero Left" | escape
+              }}
+              {%- else -%}
+              <img src="{{ 'store-lg.jpg' | asset_img_url: 'original' }}" alt="Hero Left" width="950" height="1000" loading="lazy" class="img-fluid h-auto" />
+            {%- endif -%}
+          </div>
+        </div>
+      </div>
+      <div class="col col-12 col-lg-6">
+        <div class="row mx-0 follow-right">
+          <div class="follow-top">
+            <div class="logo-box">
+              <img src="{{ 'demosoap.png' | asset_img_url: 'original' }}" alt="Hero Left" width="141" height="145" loading="lazy" class="img-fluid h-auto" />
+            </div>
+            <div class="follow-box">
+              <h3>{{ section.settings.section_title | escape }}</h3>
+              <a class="btn btn-demo-primary" href="{{ section.settings.insta_link | escape }}" target="_blank" rel="nofollow noreferrer">@DEMOSOAP</a>
+            </div>
+          </div>
+          <div class="follow-bottom">
+            <div class="bottom-content">
+              <h3>Come soap at our store</h3>
+              <p>
+                <strong class="d-block">{{ section.settings.street }}</strong> {{ section.settings.province }} {{ section.settings.zip_code }}, {{ section.settings.country }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% schema %}
+{
+  "name": "Follow Us",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "section_image",
+      "label": "Section Image"
+    },
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Section Title",
+      "default": "Follow Us"
+    },
+    {
+      "type": "text",
+      "id": "insta_link",
+      "label": "Instagram Link",
+      "default": "https://www.instagram.com/demosoap"
+    },
+    {
+      "type": "text",
+      "id": "street",
+      "label": "Instagram Link",
+      "default": "171 E Liberty St, Toronto, Unit #123,"
+    },
+    {
+      "type": "text",
+      "id": "province",
+      "label": "Province",
+      "default": "ON"
+    },
+    {
+      "type": "text",
+      "id": "zip_code",
+      "label": "Zip Code",
+      "default": "M6K 3P6"
+    },
+    {
+      "type": "text",
+      "id": "country",
+      "label": "Country",
+      "default": "Canada"
+    }
+  ]
+}
+{% endschema %}

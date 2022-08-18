@@ -1,0 +1,105 @@
+<section class="collection-slider">
+  <div class="header">
+    <h2 class="title">{{ section.settings.slider_title | escape }}</h2>
+  </div>
+  <div class="slider">
+    <div class="swiper collection-swiper">
+      <div class="swiper-pagination swiper-pagination-fraction swiper-pagination-horizontal">
+        <span class="swiper-pagination-current">1</span> / <span class="swiper-pagination-total">10</span>
+      </div>
+      <div class="swiper-wrapper">
+        {%- for block in section.blocks -%}
+          <div class="swiper-slide">
+            <div class="collection-slide">
+              <a class="slider-content text-center" href="{{ block.settings.collection_link }}">
+                <div class="collection-image">
+                  {%- if block.settings.collection_image != blank -%}
+                    {{ block.settings.collection_image | image_url: width: 291 | image_tag:
+                      loading: 'lazy',
+                      width: 291,
+                      height: 220,
+                      alt: block.settings.collection_image.alt | escape
+                    }}
+                  {%- else -%}
+                    {% assign slide = "slide-#.jpg" | replace: "#", forloop.index %}
+                    <img src="{{ slide | asset_img_url: '291x' }}" alt="{{ slide }}" width="291" height="220" loading="lazy" />
+                  {%- endif -%}
+                </div>
+                <div class="collection-title">
+                  {{ block.settings.collection_name }}
+                </div>
+              </a>
+            </div>
+          </div>
+        {%- endfor -%}
+      </div>
+    </div>
+    <div class="slider-nav">
+      <button class="btn-swiper prev-icon" aria-label="Slide Left">
+        <svg xmlns="//www.w3.org/2000/svg" viewBox="0 0 69 23" fill="none" width="70" height="21">
+          <path d="M68.976 10.6997L2.15546 10.6997" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="bevel"></path>
+          <path d="M68.976 10.6997L2.15546 10.6997" stroke="#1E1E1E" stroke-linecap="round" stroke-linejoin="bevel"></path>
+          <path d="M10.6997 1L0.999959 10.6997L10.6997 20.3995" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="bevel"></path>
+          <path d="M10.6997 1L0.999959 10.6997L10.6997 20.3995" stroke="#1E1E1E" stroke-linecap="round" stroke-linejoin="bevel"></path>
+        </svg>
+      </button>
+      <button class="btn-swiper next-icon" aria-label="Slide Right">
+        <svg xmlns="//www.w3.org/2000/svg" viewBox="0 0 69 23" fill="none" width="70" height="21">
+          <path d="M0.976074 10.6997L67.7966 10.6997" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="bevel"></path>
+          <path d="M0.976074 10.6997L67.7966 10.6997" stroke="#1E1E1E" stroke-linecap="round" stroke-linejoin="bevel"></path>
+          <path d="M59.2522 20.3994L68.9519 10.6997L59.2522 0.999919" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="bevel"></path>
+          <path d="M59.2522 20.3994L68.9519 10.6997L59.2522 0.999919" stroke="#1E1E1E" stroke-linecap="round" stroke-linejoin="bevel"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+</section>
+{% schema %}
+{
+  "name": "Collection Slider",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "slider_title",
+      "label": "Slider Title",
+      "default": "Discover our products"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "Collection Slides",
+      "limit": 10,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "collection_image",
+          "label": "Collection Image"
+        },
+        {
+          "type": "html",
+          "id": "collection_name",
+          "label": "Collection Name"
+        },
+        {
+          "type": "url",
+          "id": "collection_link",
+          "label": "Collection Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collection Slider",
+      "blocks": [
+        {
+          "type": "slide"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
