@@ -12,8 +12,8 @@
   <div class="bottom-header">
     <div class="container-fluid">
       <div class="header-inner">
-        {%- if section.settings.logo != blank -%}
         <a href="{{ routes.root_url }}" class="logo" aria-current="page">
+          {%- if section.settings.logo != blank -%}
             {%- assign logo_alt = section.settings.logo.alt | default: shop.name | escape -%}
             {{ section.settings.logo | image_url: width: 60 | image_tag:
               class: 'logo-img',
@@ -21,8 +21,10 @@
               width: 60,
               alt: logo_alt
             }}
-          </a>
-        {%- endif -%}
+            {%- else -%}
+              <img src="{{ 'demosoap.png' | asset_img_url: width: 60 }}" alt="Logo" width="60" height="62" loading="lazy" class="logo-img" />
+            {%- endif -%}
+        </a>
         <div class="navigation">
           {%- if section.settings.menu != blank -%}
             <div class="left-nav">
@@ -224,7 +226,8 @@
     {
       "type": "textarea",
       "id": "top_ticker",
-      "label": "Top Ticker"
+      "label": "Top Ticker",
+      "default": "<div class=\"flex-list-item\">Free delivery in Toronto over $45 <a href=\"/delivery-range/\" class=\"flexlist-link\">[Learn More]</a></div><div class=\"flex-list-item\">Curbside pick-up available</div><div class=\"flex-list-item\">Shipping all over Canada & the US</div>"
     },
     {
       "type": "image_picker",
