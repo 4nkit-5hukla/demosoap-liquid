@@ -228,20 +228,24 @@
         }
       }
     })
-    const swiper = new Swiper(".thumb-swiper", {
+    if($(".thumb-swiper").length > 0) {
+      const swiper = new Swiper(".thumb-swiper", {
         loop: JSON.parse($(".thumb-swiper").data('loop')),
         spaceBetween: 7,
         slidesPerView: 3,
         freeMode: true,
         watchSlidesProgress: true,
         watchOverflow: true,
-      });
-    new Swiper(".main-swiper", {
-        loop: JSON.parse($(".main-swiper").data('loop')),
-        spaceBetween: 20,
-        thumbs: {
-          swiper: swiper,
-        },
-      });
+      })
+      if($(".main-swiper").length > 0) {
+        new Swiper(".main-swiper", {
+          loop: JSON.parse($(".main-swiper").data('loop')),
+          spaceBetween: 20,
+          thumbs: {
+            swiper: swiper,
+          },
+        });
+      }
+    }
   })
 })(jQuery)

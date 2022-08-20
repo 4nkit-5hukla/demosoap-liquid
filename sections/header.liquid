@@ -44,7 +44,7 @@
                 <button id="search-btn" type="button" aria-label="Search"><i class="gsi gs-search-d"></i></button>
               </li>
               <li class="menu-item">
-                <a href="/account/"><span>Account</span></a>
+                <a href="{{ routes.account_url }}"><span>Account</span></a>
               </li>
               <li class="menu-item">
                 <button class="toggle-cart">
@@ -214,6 +214,7 @@
     })
   })
 })(jQuery)
+
 {% endjavascript %}
 
 {% schema %}
