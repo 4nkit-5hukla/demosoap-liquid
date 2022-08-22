@@ -1,13 +1,21 @@
 <footer>
   <div class="container-fluid">
+    
     <div class="footer-wrapper">
       <div class="footer-logo">
         <a class="logo" href="/">
           {%- assign footer_logo_alt = section.settings.footer_logo.alt | default: shop.name | escape -%}
           {{ section.settings.footer_logo | image_url: width: 106 | image_tag:
-            class: 'logo-img',
+            class: 'logo-img d-none d-lg-block',
             height: 109,
             width: 106,
+            alt: footer_logo_alt,
+            loading: 'lazy'
+          }}
+          {{ section.settings.footer_logo | image_url: width: 69 | image_tag:
+            class: 'logo-img d-lg-none',
+            height: 70,
+            width: 69,
             alt: footer_logo_alt,
             loading: 'lazy'
           }}
@@ -16,15 +24,41 @@
       <div class="footer-right">
         {%- assign footer_right_alt = section.settings.footer_right.alt | default: shop.name | escape -%}
           {{ section.settings.footer_right | image_url: width: 330 | image_tag:
-            class: 'logo-img',
+            class: 'logo-img d-none d-lg-block',
             height: 240,
             width: 330,
             alt: footer_right_alt,
             loading: 'lazy'
           }}
+          {{ section.settings.footer_right | image_url: width: 178 | image_tag:
+            class: 'logo-img d-lg-none',
+            height: 129,
+            width: 178,
+            alt: footer_right_alt,
+            loading: 'lazy'
+          }}
+          {%- if section.settings.show_social -%}
+          <ul class="social-icons d-lg-none">
+            <li class="icon">
+              <a href="https://twitter.com/demosoap" aria-label="gs-twitter-alt" target="_blank" rel="nofollow noreferrer" class="media-link">
+                <i class="gsi gs-twitter-alt"></i>
+              </a>
+            </li>
+            <li class="icon">
+              <a href="https://www.facebook.com/Demo-Soap-184227641589990" aria-label="gs-facebook-alt" target="_blank" rel="nofollow noreferrer" class="media-link">
+                <i class="gsi gs-facebook-alt"></i>
+              </a>
+            </li>
+            <li class="icon">
+              <a href="https://www.instagram.com/demosoap" aria-label="gs-instagram" target="_blank" rel="nofollow noreferrer" class="media-link">
+                <i class="gsi gs-instagram"></i>
+              </a>
+            </li>
+          </ul>
+          {%- endif -%}
       </div>
       <div class="footer-inner">
-        <div class="left-area">
+        <div class="left-area d-none d-lg-block">
           <div class="copyright"><strong>© {{ 'now' | date: "%Y" }} {{ shop.name }}</strong> All rights reserved.</div>
           {%- if section.settings.show_social -%}
           <ul class="social-icons">
@@ -46,20 +80,36 @@
           </ul>
           {%- endif -%}
         </div>
-        <div class="right-area">
+        <div class="right-area d-none d-lg-block">
           <div class="right-inner">
             <div class="footer-menus">
               <ul class="menu">
-                <li class="item"><a class="link" href="/">Shop</a></li>
-                <li class="item"><a class="link" href="/pages/blog/">Blog</a></li>
-                <li class="item"><a class="link" href="/pages/about-us/">About Us</a></li>
-                <li class="item"><a class="link" href="/pages/contact/">Contact</a></li>
+                <li class="item">
+                  <a class="link" href="/">Shop</a>
+                </li>
+                <li class="item">
+                  <a class="link" href="/pages/blog/">Blog</a>
+                </li>
+                <li class="item">
+                  <a class="link" href="/pages/about-us/">About Us</a>
+                </li>
+                <li class="item">
+                  <a class="link" href="/pages/contact/">Contact</a>
+                </li>
               </ul>
               <ul class="menu">
-                <li class="item"><a class="link" href="/pages/shipping">Shipping</a></li>
-                <li class="item"><a class="link" href="/pages/refund-policy/">Refund Policy</a></li>
-                <li class="item"><a class="link" href="/pages/privacy-policy/">Privacy Policy</a></li>
-                <li class="item"><a class="link" href="/pages/terms-of-service/">Terms of Service</a></li>
+                <li class="item">
+                  <a class="link" href="/pages/shipping">Shipping</a>
+                </li>
+                <li class="item">
+                  <a class="link" href="/pages/refund-policy/">Refund Policy</a>
+                </li>
+                <li class="item">
+                  <a class="link" href="/pages/privacy-policy/">Privacy Policy</a>
+                </li>
+                <li class="item">
+                  <a class="link" href="/pages/terms-of-service/">Terms of Service</a>
+                </li>
               </ul>
             </div>
             <div class="footer-end">
@@ -122,6 +172,91 @@
             </div>
           </div>
         </div>
+        <div class="footer-menus d-lg-none">
+          <ul class="menu">
+            <li class="item">
+              <a class="link" href="/">Shop</a>
+            </li>
+            <li class="item">
+              <a class="link" href="/pages/blog/">Blog</a>
+            </li>
+            <li class="item">
+              <a class="link" href="/pages/about-us/">About Us</a>
+            </li>
+            <li class="item">
+              <a class="link" href="/pages/contact/">Contact</a>
+            </li>
+          </ul>
+          <ul class="menu">
+            <li class="item">
+              <a class="link" href="/pages/shipping">Shipping</a>
+            </li>
+            <li class="item">
+              <a class="link" href="/pages/refund-policy/">Refund Policy</a>
+            </li>
+            <li class="item">
+              <a class="link" href="/pages/privacy-policy/">Privacy Policy</a>
+            </li>
+            <li class="item">
+              <a class="link" href="/pages/terms-of-service/">Terms of Service</a>
+            </li>
+          </ul>
+        </div>
+        <div class="news-letter d-lg-none">
+          {%- if section.settings.newsletter_heading != blank -%}
+            <h4 class="title">{{ section.settings.newsletter_heading | escape }}</h4>
+          {%- endif -%}
+          <div class="action-area">
+            {%- form 'customer', class: 'subscribe-form' -%}
+              <input type="hidden" name="contact[tags]" value="newsletter" />
+              <input
+                id="NewsletterForm--{{ section.id }}"
+                type="email"
+                name="contact[email]"
+                class="subscribe-email"
+                value="{{ form.email }}"
+                aria-required="true"
+                autocorrect="off"
+                autocapitalize="off"
+                autocomplete="email"
+                {% if form.errors %}
+                  autofocus
+                  aria-invalid="true"
+                  aria-describedby="ContactFooter-error"
+                {% elsif form.posted_successfully? %}
+                  aria-describedby="ContactFooter-success"
+                {% endif %}
+                placeholder="YOUR EMAIL ADDRESS"
+                required
+              />
+              <button class="btn-sign-up" type="submit" name="commit" id="Subscribe" aria-label="{{ 'newsletter.button_label' | t }}">
+                  SIGN UP
+              </button>
+              {%- if form.errors -%}
+                <div role="alert" class="fade response alert alert-danger alert-dismissible show">
+                  <button type="button" class="btn-close" aria-label="Close alert"></button>
+                  {% render 'icon-error' %}{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}
+                </div>
+              {%- endif -%}
+            {%- if form.posted_successfully? -%}
+              <div role="alert" class="fade response alert alert-success alert-dismissible show">
+                <button type="button" class="btn-close" aria-label="Close alert"></button>
+                x{% render 'icon-success' %}{{ 'newsletter.success' | t }}
+              </div>
+            {%- endif -%}
+          {%- endform -%}
+          </div>
+        </div>
+        {%- if section.settings.payment_enable -%}
+        <div class="payment-methods d-lg-none">
+          {%- for type in shop.enabled_payment_types -%}
+            <div class="method d-inline-block">
+              {{ type | payment_type_svg_tag: class: '' }}
+            </div>
+          {%- endfor -%}
+        </div>
+        {%- endif -%}
+        <div class="copyright d-lg-none"><strong>© {{ 'now' | date: "%Y" }} {{ shop.name }}</strong> All rights reserved.</div>
       </div>
     </div>
   </div>

@@ -16,19 +16,27 @@
           {%- if section.settings.logo != blank -%}
             {%- assign logo_alt = section.settings.logo.alt | default: shop.name | escape -%}
             {{ section.settings.logo | image_url: width: 60 | image_tag:
-              class: 'logo-img',
+              class: 'logo-img d-none d-lg-block',
               height: 62,
               width: 60,
               alt: logo_alt
             }}
+            {{ section.settings.logo | image_url: width: 48 | image_tag:
+              class: 'logo-img d-lg-none',
+              height: 50,
+              width: 48,
+              alt: logo_alt
+            }}
             {%- else -%}
-              <img src="{{ 'demosoap.png' | asset_img_url: width: 60 }}" alt="Logo" width="60" height="62" loading="lazy" class="logo-img" />
+              <img src="{{ 'demosoap.png' | asset_img_url: width: 60 }}" alt="Logo" width="60" height="62" loading="lazy" class="logo-img d-none d-lg-block" />
+              <img src="{{ 'demosoap.png' | asset_img_url: width: 48 }}" alt="Logo" width="48" height="50" loading="lazy" class="logo-img d-lg-none" />
             {%- endif -%}
         </a>
         <div class="navigation">
           {%- if section.settings.menu != blank -%}
             <div class="left-nav">
-              <ul class="menu-wrapper" role="list">
+              <button type="button" class="mega-toggle d-lg-none" aria-label="Open Menu"></button>
+              <ul class="menu-wrapper d-none d-lg-flex" role="list">
                 <li class="menu-item">
                   <button class="toggle-drop-menu">{{ 'Shop' | escape }}</button>
                 </li>
@@ -83,6 +91,7 @@
   <div id="mega-menu" class="mega-menu">
     <div class="container-fluid">
       <div class="menu-wrapper">
+        <button class="close-menu d-lg-none" aria-label="Close Menu" type="button"></button>
         <div class="menu-area">
           {%- if section.blocks != blank -%}
           <ul class="menu">
@@ -94,7 +103,7 @@
           </ul>
           {%- endif -%}
         </div>
-        <div class="preview-area"></div>
+        <div class="preview-area d-none d-lg-flex"></div>
       </div>
     </div>
   </div>
