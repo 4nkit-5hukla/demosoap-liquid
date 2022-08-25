@@ -230,7 +230,7 @@
           "9f0a419b-67e3-44c8-b88e-2286135ee106"
         ],
         "settings": {
-          "top_ticker": "<div class=\"flex-list-item\">Free delivery in Toronto over $45 <a href=\"\/delivery-range\/\" class=\"flexlist-link\">[Learn More]<\/a>\n<\/div><div class=\"flex-list-item\">Curbside pick-up available<\/div><div class=\"flex-list-item\">Shipping all over Canada & the US<\/div>",
+          "top_ticker": "<div class=\"flex-list-item\">Free delivery in Toronto over $45 <a href=\"\/pages\/delivery-range\/\" class=\"flexlist-link\">[Learn More]<\/a>\n<\/div><div class=\"flex-list-item\">Curbside pick-up available<\/div><div class=\"flex-list-item\">Shipping all over Canada & the US<\/div>",
           "menu": "main-menu"
         }
       },
@@ -383,28 +383,16 @@
         "header": {
           "type": "header",
           "settings": {
-            "color_scheme": "background-1",
-            "logo_width": 90,
-            "logo_position": "middle-left",
-            "menu": "main-menu",
-            "show_line_separator": true,
-            "enable_sticky_header": true,
-            "margin_bottom": 0
+            "menu": "main-menu"
           }
         },
         "footer": {
           "type": "footer",
           "settings": {
-            "color_scheme": "background-1",
             "newsletter_enable": true,
             "newsletter_heading": "Subscribe to our emails",
             "show_social": true,
-            "enable_country_selector": false,
-            "enable_language_selector": false,
-            "payment_enable": true,
-            "margin_top": 48,
-            "padding_top": 36,
-            "padding_bottom": 36
+            "payment_enable": true
           }
         },
         "main-password-header": {
