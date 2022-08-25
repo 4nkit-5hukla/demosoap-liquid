@@ -1,14 +1,152 @@
 <section id="MainProduct-{{ section.id }}" class="product">
   <div class="container-fluid">
     <div class="inner-wrapper">
-      <div class="product-content">
+      <div class="product-content d-lg-none">
+        <div class="product-form">
+          <h1 class="title">{{ product.title | escape }}</h1>
+          <div class="prices">
+            <h3 class="our-price">{{ product.price | money_with_currency }}</h3>
+            {% if product.compare_at_price != blank %}
+            <h4 class="retail-price">{{ product.compare_at_price | money_with_currency }}</h4>
+            {% endif %}
+          </div>
+          <div class="gallery">
+            <div class="wrap">
+              <div class="sliders">
+                <div class="mainSwiper">
+                  <div class="swiper main-swiper" data-loop="{% if product.media.size > 0 %}true{% else %}false{% endif %}">
+                    <div class="swiper-wrapper">
+                    {%- for media in product.media -%}
+                      <div class="swiper-slide">
+                        <div class="image">
+                          <img src="{{ media | image_url: width: 365 }}"
+                            alt="{{ media.alt | escape }}"
+                            height="{{ 365 | divided_by: media.aspect_ratio }}"
+                            width="365"
+                            loading="lazy"
+                            class="img-fluid"
+                          />
+                        </div>
+                      </div>
+                    {%- endfor -%}
+                    </div>
+                  </div>
+                </div>
+                <div class="thumbSwiper">
+                  <div class="swiper thumb-swiper" data-loop="{% if product.media.size > 3 %}true{% else %}false{% endif %}">
+                    <div class="swiper-wrapper">
+                    {%- for media in product.media -%}
+                      <div class="swiper-slide">
+                        <div class="image-thumb text-center">
+                          <img src="{{ media | image_url: width: 120 }}"
+                            alt="{{ media.alt | escape }}"
+                            height="{{ 120 | divided_by: media.aspect_ratio }}"
+                            width="84"
+                            loading="lazy"
+                            class="img-fluid w-100 h-100"
+                            style="object-fit:contain;"
+                          />
+                        </div>
+                      </div>
+                    {%- endfor -%}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-wrapper">
+            {% if product.variants.size > 1 %}
+              <div class="variant-types">
+                <div class="type mb-4">
+                  <h4>
+                    <span>Denominations : </span>
+                    <strong class="denomination">{{ product.selected_or_first_available_variant.price | money }}</strong>
+                  </h4>
+                  {%- for variant in product.variants -%}
+                    <button
+                      type="button"
+                      value="{{ variant.price | money }}"
+                      class="btn btn-sm btn-demo-primary me-3 {% if product.selected_or_first_available_variant.id == variant.id %}active{% endif %}"
+                      data-id={{ variant.id | escape}}
+                      data-title={{ variant.title | escape }}
+                    >
+                      {{ variant.price | money }}
+                      </button>
+                  {% endfor %}
+                </div>
+              </div>
+            {% endif %}
+            <div class="add-to-cart">
+              <div class="flex-grow-1 my-auto">
+                  <div class="d-flex justify-content-between">
+                    <div class="flex-shrink-1 my-auto">
+                      <div class="quantity-selector">
+                        <button type="button" class="btn-quantity minus" aria-label="Quantity Minus"></button>
+                        <span class="quantity-value">1</span>
+                        <button type="button" class="btn-quantity plus" aria-label="Quantity Plus"></button>
+                      </div>
+                    </div>
+                    <div class="flex-shrink-1 my-auto">
+                      <div class="info-inline"><span>Weight: </span><strong>160gr</strong></div>
+                    </div>
+                  </div>
+                  <div class="d-flex">
+                    <div class="flex-grow-1">
+                      <button
+                        type="button"
+                        id="add2cart"
+                        class="btn btn-demo-primary w-100"
+                        {% if product.selected_or_first_available_variant.available == false %}disabled{% endif %}
+                        data-variant="{{ product.selected_or_first_available_variant.id }}"
+                        data-quantity="1"
+                      >
+                        {%- if product.selected_or_first_available_variant.available -%}
+                          {{ 'Add To Bag' }}
+                        {%- else -%}
+                          {{ 'Sold Out' }}
+                        {%- endif -%}
+                      </button>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="description">
+            {{ product.description }}
+            <div className="additional-info">
+              <div className="info-block">
+                <strong>This product is organic, vegan & natural.</strong>
+              </div>
+              <div class="info-block my-4">
+                <div class="info-inline">
+                  <span>Weight: </span>
+                  <strong>{{ product.selected_or_first_available_variant.weight }} {{ product.selected_or_first_available_variant.weight_unit }}</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about-us">
+          <h5 class="title">About Us</h5>
+          <div class="description">
+            <p>
+              <strong>We are 100% Handmade in Toronto, Canada.</strong> We
+              are proud to be doing what we love since 2004. We make
+              everything ourselves in small batches in our Liberty Village
+              studio. We focus on using the highest quality ingredients
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="product-content d-none d-lg-flex">
         <div class="flex-shrink-1">
           <div class="d-flex h-100 flex-column">
-            <div class="gallery">
+            <div class="gallery lg">
               <div class="wrap">
                 <div class="sliders">
                   <div class="mainSwiper">
-                    <div class="swiper main-swiper" data-loop="{% if product.media.size > 0 %}true{% else %}false{% endif %}">
+                    <div class="swiper main-swiper-lg" data-loop="{% if product.media.size > 0 %}true{% else %}false{% endif %}">
                       <div class="swiper-wrapper">
                       {%- for media in product.media -%}
                         <div class="swiper-slide">
@@ -27,7 +165,7 @@
                     </div>
                   </div>
                   <div class="thumbSwiper">
-                    <div class="swiper thumb-swiper" data-loop="{% if product.media.size > 3 %}true{% else %}false{% endif %}">
+                    <div class="swiper thumb-swiper-lg" data-loop="{% if product.media.size > 3 %}true{% else %}false{% endif %}">
                       <div class="swiper-wrapper">
                       {%- for media in product.media -%}
                         <div class="swiper-slide">

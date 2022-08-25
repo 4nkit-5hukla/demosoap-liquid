@@ -3,12 +3,12 @@
     const searchBg = $('#search-bg')
     const searchBtn = $('#search-btn')
     const searchBox = $('#search')
-    const toggleDropMenu = $('.toggle-drop-menu')
+    const toggleDropMenu = $('.toggle-drop-menu, .mega-toggle')
+    const closeDropMenu = $('#mega-menu .menu-wrapper .close-menu')
     const megaMenu = $('#mega-menu')
     const megaMenuItem = $('#mega-menu .menu .item .link')
     const quantityButton = $('.quantity-selector .btn-quantity')
     const variantButtons = $('.variant-types .btn')
-    const quantityValue = $('.quantity-selector .quantity-value')
     const add2Cart = $('#add2cart')
     $(window).scroll(function () {
       const html = $('html'),
@@ -38,10 +38,10 @@
         ),
         sideBar = document.querySelector('.product-listing .side-bar'),
         galleryContainer = document.querySelector(
-          '.product-content .gallery'
+          '.product .product-content .gallery.lg'
         ),
         galleryWrapper = document.querySelector(
-          '.product-content .gallery .wrap'
+          '.product .product-content .gallery.lg .wrap'
         )
       if (sideBar) {
         if (window.scrollY <= sideBar.offsetTop - header.offsetHeight - 20) {
@@ -74,8 +74,8 @@
               (galleryContainer.offsetHeight - galleryWrapper.offsetHeight),
         ]
         if (condition[0]) {
-            galleryWrapper.style.transform = `translateY(0)`
-          } else if (condition[1] && condition[2]) {
+          galleryWrapper.style.transform = `translateY(0)`
+        } else if (condition[1] && condition[2]) {
             galleryWrapper.style.transform = `translateY(${
               winPosY -
               galleryWrapper.offsetTop +
@@ -104,12 +104,16 @@
       firstItem.addClass('active')
       megaMenu.toggleClass('show')
     })
+    closeDropMenu.click(function () {
+      megaMenu.removeClass('show')
+    })
     megaMenuItem.hover(function () {
       megaMenu.find('.link.active').removeClass('active')
       megaMenu.find('.preview-area img').attr('src', $(this).data('image'))
       $(this).addClass('active')
     })
     quantityButton.click(function () {
+      const quantityValue = $(this).parents('.quantity-selector').find('.quantity-value')
       const currentVal = parseInt(quantityValue.text())
       if($(this).hasClass('minus')){
         if(currentVal > 1){
@@ -240,6 +244,25 @@
       if($(".main-swiper").length > 0) {
         new Swiper(".main-swiper", {
           loop: JSON.parse($(".main-swiper").data('loop')),
+          spaceBetween: 20,
+          thumbs: {
+            swiper: swiper,
+          },
+        });
+      }
+    }
+    if($(".thumb-swiper-lg").length > 0) {
+      const swiper = new Swiper(".thumb-swiper-lg", {
+        loop: JSON.parse($(".thumb-swiper-lg").data('loop')),
+        spaceBetween: 7,
+        slidesPerView: 3,
+        freeMode: true,
+        watchSlidesProgress: true,
+        watchOverflow: true,
+      })
+      if($(".main-swiper-lg").length > 0) {
+        new Swiper(".main-swiper-lg", {
+          loop: JSON.parse($(".main-swiper-lg").data('loop')),
           spaceBetween: 20,
           thumbs: {
             swiper: swiper,
