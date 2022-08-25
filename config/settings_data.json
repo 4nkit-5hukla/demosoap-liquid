@@ -117,6 +117,91 @@
       },
       "header": {
         "type": "header",
+        "blocks": {
+          "63d6d933-85fd-46a7-b8cb-4ec50063e768": {
+            "type": "mega_item",
+            "settings": {
+              "item_label": "ALL PRODUCTS",
+              "item_link": "\/collections\/all",
+              "item_image": "shopify:\/\/shop_images\/all-products.jpg"
+            }
+          },
+          "27131a3b-64f5-4024-b832-1142352d3d48": {
+            "type": "mega_item",
+            "settings": {
+              "item_label": "",
+              "item_link": ""
+            }
+          },
+          "3264fb2a-9252-4f6f-9181-ea148fe9f01d": {
+            "type": "mega_item",
+            "settings": {
+              "item_label": "",
+              "item_link": ""
+            }
+          },
+          "1f3ffb37-92cd-4f82-bed3-9fbcb1827402": {
+            "type": "mega_item",
+            "settings": {
+              "item_label": "",
+              "item_link": ""
+            }
+          },
+          "23495f99-32ef-4406-a2a5-636ea681349f": {
+            "type": "mega_item",
+            "settings": {
+              "item_label": "",
+              "item_link": ""
+            }
+          },
+          "59489194-7361-4bd5-9578-16bdfcb40fdb": {
+            "type": "mega_item",
+            "settings": {
+              "item_label": "",
+              "item_link": ""
+            }
+          },
+          "cb2f1666-e51f-4b8a-b76d-63d8492184f4": {
+            "type": "mega_item",
+            "settings": {
+              "item_label": "",
+              "item_link": ""
+            }
+          },
+          "b6d9d3d3-ba3b-45d9-9a5e-19bedface92d": {
+            "type": "mega_item",
+            "settings": {
+              "item_label": "",
+              "item_link": ""
+            }
+          },
+          "d1596981-32ed-4413-b249-231314129610": {
+            "type": "mega_item",
+            "settings": {
+              "item_label": "",
+              "item_link": ""
+            }
+          },
+          "273b74b1-a1b0-4ba8-891a-45c937620625": {
+            "type": "mega_item",
+            "settings": {
+              "item_label": "",
+              "item_link": ""
+            }
+          }
+        },
+        "block_order": [
+          "63d6d933-85fd-46a7-b8cb-4ec50063e768",
+          "27131a3b-64f5-4024-b832-1142352d3d48",
+          "3264fb2a-9252-4f6f-9181-ea148fe9f01d",
+          "1f3ffb37-92cd-4f82-bed3-9fbcb1827402",
+          "23495f99-32ef-4406-a2a5-636ea681349f",
+          "59489194-7361-4bd5-9578-16bdfcb40fdb",
+          "cb2f1666-e51f-4b8a-b76d-63d8492184f4",
+          "b6d9d3d3-ba3b-45d9-9a5e-19bedface92d",
+          "d1596981-32ed-4413-b249-231314129610",
+          "273b74b1-a1b0-4ba8-891a-45c937620625"
+        ],
         "settings": {
           "top_ticker": "<div class=\"flex-list-item\">Free delivery in Toronto over $45 <a href=\"\/delivery-range\/\" class=\"flexlist-link\">[Learn More]<\/a>\n<\/div><div class=\"flex-list-item\">Curbside pick-up available<\/div><div class=\"flex-list-item\">Shipping all over Canada & the US<\/div>",
           "menu": "main-menu"
