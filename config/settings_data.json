@@ -137,57 +137,81 @@
           "3264fb2a-9252-4f6f-9181-ea148fe9f01d": {
             "type": "mega_item",
             "settings": {
-              "item_label": "",
-              "item_link": ""
+              "item_label": "Donuts",
+              "item_link": "shopify:\/\/collections\/donut",
+              "item_image": "shopify:\/\/shop_images\/donuts_b13f4e4a-39c3-48c4-9ee1-64e0da1b3f4a.jpg"
             }
           },
           "1f3ffb37-92cd-4f82-bed3-9fbcb1827402": {
             "type": "mega_item",
             "settings": {
-              "item_label": "",
-              "item_link": ""
+              "item_label": "Bath Bombs",
+              "item_link": "shopify:\/\/collections\/bath-bomb",
+              "item_image": "shopify:\/\/shop_images\/bath-bombs.jpg"
             }
           },
           "23495f99-32ef-4406-a2a5-636ea681349f": {
             "type": "mega_item",
             "settings": {
-              "item_label": "",
-              "item_link": ""
+              "item_label": "Treats",
+              "item_link": "shopify:\/\/collections\/treat",
+              "item_image": "shopify:\/\/shop_images\/treat.jpg"
             }
           },
           "59489194-7361-4bd5-9578-16bdfcb40fdb": {
             "type": "mega_item",
             "settings": {
-              "item_label": "",
-              "item_link": ""
+              "item_label": "Fragrant",
+              "item_link": "shopify:\/\/collections\/fragrant",
+              "item_image": "shopify:\/\/shop_images\/fragrant.jpg"
             }
           },
           "cb2f1666-e51f-4b8a-b76d-63d8492184f4": {
             "type": "mega_item",
             "settings": {
-              "item_label": "",
-              "item_link": ""
+              "item_label": "Figure",
+              "item_link": "shopify:\/\/collections\/figure",
+              "item_image": "shopify:\/\/shop_images\/figure.jpg"
             }
           },
           "b6d9d3d3-ba3b-45d9-9a5e-19bedface92d": {
             "type": "mega_item",
             "settings": {
-              "item_label": "",
-              "item_link": ""
+              "item_label": "Skincare",
+              "item_link": "shopify:\/\/collections\/skincare",
+              "item_image": "shopify:\/\/shop_images\/skincare.jpg"
             }
           },
           "d1596981-32ed-4413-b249-231314129610": {
             "type": "mega_item",
             "settings": {
-              "item_label": "",
-              "item_link": ""
+              "item_label": "Massage",
+              "item_link": "shopify:\/\/collections\/massage",
+              "item_image": "shopify:\/\/shop_images\/massage.jpg"
             }
           },
           "273b74b1-a1b0-4ba8-891a-45c937620625": {
             "type": "mega_item",
             "settings": {
-              "item_label": "",
-              "item_link": ""
+              "item_label": "Bath Salts",
+              "item_link": "shopify:\/\/collections\/bath-salts",
+              "item_image": "shopify:\/\/shop_images\/bath-salt_0558000b-f1e0-4405-9e64-4ea2653f1606.png"
+            }
+          },
+          "06452597-35f5-4689-8a90-4100fbc89f4e": {
+            "type": "mega_item",
+            "settings": {
+              "item_label": "Beard",
+              "item_link": "shopify:\/\/collections\/beard",
+              "item_image": "shopify:\/\/shop_images\/bath-salt_0558000b-f1e0-4405-9e64-4ea2653f1606.png"
+            }
+          },
+          "9f0a419b-67e3-44c8-b88e-2286135ee106": {
+            "type": "mega_item",
+            "settings": {
+              "item_label": "Gifts",
+              "item_link": "shopify:\/\/collections\/gift",
+              "item_image": "shopify:\/\/shop_images\/gift_686eeef8-d093-47c7-a608-ec66f71da6cd.jpg"
             }
           }
         },
@@ -201,7 +225,9 @@
           "cb2f1666-e51f-4b8a-b76d-63d8492184f4",
           "b6d9d3d3-ba3b-45d9-9a5e-19bedface92d",
           "d1596981-32ed-4413-b249-231314129610",
-          "273b74b1-a1b0-4ba8-891a-45c937620625"
+          "273b74b1-a1b0-4ba8-891a-45c937620625",
+          "06452597-35f5-4689-8a90-4100fbc89f4e",
+          "9f0a419b-67e3-44c8-b88e-2286135ee106"
         ],
         "settings": {
           "top_ticker": "<div class=\"flex-list-item\">Free delivery in Toronto over $45 <a href=\"\/delivery-range\/\" class=\"flexlist-link\">[Learn More]<\/a>\n<\/div><div class=\"flex-list-item\">Curbside pick-up available<\/div><div class=\"flex-list-item\">Shipping all over Canada & the US<\/div>",
