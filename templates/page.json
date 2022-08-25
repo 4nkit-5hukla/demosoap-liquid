@@ -1,10 +1,86 @@
 {
   "sections": {
     "main": {
-      "type": "main-page"
+      "type": "main-page",
+      "settings": {
+      }
+    },
+    "1661268594053005b9": {
+      "type": "about-us-page",
+      "blocks": {
+        "1661268594a1314640-0": {
+          "type": "about-section",
+          "settings": {
+            "section_content": ""
+          }
+        },
+        "78dba7c1-4492-49b5-a2a8-6fa82543512e": {
+          "type": "about-section",
+          "settings": {
+            "section_content": ""
+          }
+        },
+        "03e911c3-ce66-49fe-a210-28b076813d68": {
+          "type": "about-section",
+          "settings": {
+            "section_content": ""
+          }
+        },
+        "d9cea690-e890-4623-b79d-8db1b8748cd1": {
+          "type": "about-section",
+          "settings": {
+            "section_content": ""
+          }
+        }
+      },
+      "block_order": [
+        "1661268594a1314640-0",
+        "78dba7c1-4492-49b5-a2a8-6fa82543512e",
+        "03e911c3-ce66-49fe-a210-28b076813d68",
+        "d9cea690-e890-4623-b79d-8db1b8748cd1"
+      ],
+      "settings": {
+        "section_title": "ABOUT US"
+      }
+    },
+    "1661268630532e0080": {
+      "type": "gallery-slider",
+      "blocks": {
+        "16612686305d0a5b77-0": {
+          "type": "slide",
+          "settings": {
+          }
+        },
+        "3c2b6758-470f-4601-b280-15d36d2b3fa8": {
+          "type": "slide",
+          "settings": {
+          }
+        },
+        "04a461fe-a164-4435-a740-2b902c92a293": {
+          "type": "slide",
+          "settings": {
+          }
+        },
+        "e5f40fb8-9857-4ee5-9ccc-6972440da8e0": {
+          "type": "slide",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "16612686305d0a5b77-0",
+        "3c2b6758-470f-4601-b280-15d36d2b3fa8",
+        "04a461fe-a164-4435-a740-2b902c92a293",
+        "e5f40fb8-9857-4ee5-9ccc-6972440da8e0"
+      ],
+      "settings": {
+        "section_title": "GALLERY"
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "1661268594053005b9",
+    "1661268630532e0080"
   ]
 }
