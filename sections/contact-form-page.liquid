@@ -7,6 +7,30 @@
       <div class="form-outer">
         <div class="contact-form">
           {%- form 'contact', id: 'contact-form' -%}
+            {%- if form.posted_successfully? -%}
+              <div class="alert alert-success mt-3 mb-0" role="alert">
+                {{ 'templates.contact.form.post_success' | t }}
+              </div>
+              <h2 class="form-status form-status-list form__message" tabindex="-1" autofocus>{% render 'icon-success' %} {{ 'templates.contact.form.post_success' | t }}</h2>
+            {%- elsif form.errors -%}
+              <div class="alert alert-danger mt-3 mb-0" role="alert">
+                {{ 'templates.contact.form.error_heading' | t }}
+                <ul class="mb-0">
+                  {%- for field in form.errors -%}
+                    <li>
+                      {%- if field == 'form' -%}
+                        {{ form.errors.messages[field] }}
+                      {%- else -%}
+                        <a href="#RegisterForm-{{ field }}">
+                          {{ form.errors.translated_fields[field] | capitalize }}
+                          {{ form.errors.messages[field] }}
+                        </a>
+                      {%- endif -%}
+                    </li>
+                  {%- endfor -%}
+                </ul>
+              </div>
+            {%- endif -%}
               <div class="d-block d-lg-flex double-col">
                 <div class="form-group">
                   <input class="form-control" autocomplete="name" type="text" id="name" size="40" name="contact[{{ 'templates.contact.form.name' | t }}]" value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}" placeholder="{{ 'YOUR NAME' }}" required />

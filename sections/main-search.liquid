@@ -32,7 +32,7 @@
             </div>
             <div class="products">
             {%- if search.results_count == 0 and search.filters == empty -%}
-              <div class="alert alert-info" role="alert" style="">{{ 'templates.search.no_results' | t: terms: search.terms }}</div>
+              <div class="alert alert-info" role="alert">{{ 'templates.search.no_results' | t: terms: search.terms }}</div>
             {%- endif -%}
             {%- paginate search.results by 9 -%}
               <div class="row gx-2 gx-lg-4">
