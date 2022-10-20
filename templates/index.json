@@ -14,7 +14,7 @@
           "type": "text",
           "settings": {
             "strong": "Demosoap",
-            "following": " is vegan, gluten free, kosher,",
+            "following": "is vegan, gluten free, kosher,",
             "new_line": "hypoallergenic & biodegradable."
           }
         },
@@ -22,7 +22,7 @@
           "type": "button",
           "settings": {
             "button_label": "Browse All",
-            "button_link": "shopify://collections/all"
+            "button_link": "shopify:\/\/collections\/all"
           }
         }
       },
@@ -30,82 +30,89 @@
         "heading",
         "text",
         "button"
-      ]
+      ],
+      "settings": {
+      }
     },
     "collection_slider": {
       "type": "collection-slider",
-      "settings": {
-        "slider_title": "Discover our products"
-      },
       "blocks": {
         "slide1": {
           "type": "slide",
           "settings": {
-            "collection_name": "<h3>Donuts</h3>",
-            "collection_link": "/collections/donut/"
+            "collection_name": "<h3>Donuts<\/h3>",
+            "collection_link": "\/collections\/donut\/"
           }
         },
         "slide2": {
           "type": "slide",
           "settings": {
-            "collection_name": "<h3 class=\"double-line-text\">Bath <span class=\"d-block\">Bombs</span></h3>",
-            "collection_link": "/collections/bath-bomb/"
+            "collection_name": "<h3 class=\"double-line-text\">Bath <span class=\"d-block\">Bombs<\/span>\n<\/h3>",
+            "collection_link": "\/collections\/bath-bomb\/"
           }
         },
         "slide3": {
           "type": "slide",
           "settings": {
-            "collection_name": "<h3>Treat</h3>",
-            "collection_link": "/collections/treat/"
+            "collection_name": "<h3>Treat<\/h3>",
+            "collection_link": "\/collections\/treat\/"
           }
         },
         "slide4": {
           "type": "slide",
           "settings": {
-            "collection_name": "<h3>Fragrant</h3>",
-            "collection_link": "/collections/fragrant/"
+            "collection_name": "<h3>Fragrant<\/h3>",
+            "collection_link": "\/collections\/fragrant\/"
           }
         },
         "slide5": {
           "type": "slide",
           "settings": {
-            "collection_name": "<h3>Figure</h3>",
-            "collection_link": "/collections/figure/"
+            "collection_name": "<h3>Figure<\/h3>",
+            "collection_link": "\/collections\/figure\/"
           }
         },
         "slide6": {
           "type": "slide",
           "settings": {
-            "collection_name": "<h3>Gift</h3>",
-            "collection_link": "/collections/gift/"
+            "collection_name": "<h3>Gift<\/h3>",
+            "collection_link": "\/collections\/gift\/"
           }
         },
         "slide7": {
           "type": "slide",
           "settings": {
-            "collection_name": "<h3>Skincare</h3>",
-            "collection_link": "/collections/skincare/"
+            "collection_name": "<h3>Skincare<\/h3>",
+            "collection_link": "\/collections\/skincare\/"
           }
         },
         "slide8": {
           "type": "slide",
           "settings": {
-            "collection_name": "<h3>Essentials</h3>",
-            "collection_link": "/collections/essentials/"
+            "collection_name": "<h3>Essentials<\/h3>",
+            "collection_link": "\/collections\/essentials\/"
           }
         },
         "slide9": {
           "type": "slide",
           "settings": {
-            "collection_name": "<h3>Massage</h3>",
-            "collection_link": "/collections/massage/"
+            "collection_name": "<h3>Massage<\/h3>",
+            "collection_link": "\/collections\/massage\/"
           }
         },
         "slide10": {
           "type": "slide",
           "settings": {
-            "collection_name": "<h3 class=\"double-line-text\">Bath <span class=\"d-block\">Salts</span></h3>",
-            "collection_link": "/collections/bath-salts/"
+            "collection_name": "<h3 class=\"double-line-text\">Bath <span class=\"d-block\">Salts<\/span>\n<\/h3>",
+            "collection_link": "\/collections\/bath-salts\/"
+          }
+        },
+        "bf067217-cbd2-459f-a009-9fd04d0ec8c2": {
+          "type": "slide",
+          "settings": {
+            "collection_image": "shopify:\/\/shop_images\/soy-candles.png",
+            "collection_name": "Soy Candles",
+            "collection_link": "shopify:\/\/collections\/soy-candles"
           }
         }
       },
@@ -119,8 +126,12 @@
         "slide7",
         "slide8",
         "slide9",
-        "slide10"
-      ]
+        "slide10",
+        "bf067217-cbd2-459f-a009-9fd04d0ec8c2"
+      ],
+      "settings": {
+        "slider_title": "Discover our products"
+      }
     },
     "featured_products": {
       "type": "featured-products",
@@ -132,13 +143,22 @@
     "follow_us": {
       "type": "follow-us",
       "settings": {
-        "section_title": "Follow Us"
+        "section_title": "Follow Us",
+        "insta_link": "https:\/\/www.instagram.com\/demosoap",
+        "street": "171 E Liberty St, Toronto, Unit #123,",
+        "province": "ON",
+        "zip_code": "M6K 3P6",
+        "country": "Canada"
       }
     },
     "blogs_slider": {
       "type": "blogs-slider",
       "settings": {
-        "section_title": "OUR BLOG"
+        "section_title": "OUR BLOG",
+        "article1": "",
+        "article2": "",
+        "article3": "",
+        "article4": ""
       }
     }
   },
