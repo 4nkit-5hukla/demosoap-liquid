@@ -32,7 +32,8 @@
         "button"
       ],
       "settings": {
-        "image_left": "shopify:\/\/shop_images\/left.jpg"
+        "image_left": "shopify:\/\/shop_images\/left-634.jpg",
+        "image_right": "shopify:\/\/shop_images\/right-634.jpg"
       }
     },
     "collection_slider": {
