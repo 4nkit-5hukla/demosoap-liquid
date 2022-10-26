@@ -32,7 +32,7 @@
         "button"
       ],
       "settings": {
-        "image_left": "shopify:\/\/shop_images\/hero-left.jpg"
+        "image_left": "shopify:\/\/shop_images\/left.jpg"
       }
     },
     "collection_slider": {
