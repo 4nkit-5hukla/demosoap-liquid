@@ -50,7 +50,7 @@
           <div data-gatsby-image-wrapper="" class="gatsby-image-wrapper gatsby-image-wrapper-constrained banner-image">
             {%- if section.settings.image_right != blank -%}
               {%-liquid
-                assign image_right_height = section.settings.image_right.width | divided_by: section.settings.image_right.aspect_ratio
+                assign image_right_height = section.settings.image_right.width
               -%}
               {{ section.settings.image_right | image_url: width: 634 | image_tag:
                 loading: 'lazy',
