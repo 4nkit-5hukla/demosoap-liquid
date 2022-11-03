@@ -222,6 +222,14 @@
               "item_link": "shopify:\/\/collections\/gift",
               "item_image": "shopify:\/\/shop_images\/gift_686eeef8-d093-47c7-a608-ec66f71da6cd.jpg"
             }
+          },
+          "509ece59-2d82-4a34-9fce-c1988debe27a": {
+            "type": "mega_item",
+            "settings": {
+              "item_label": "Shower steamers",
+              "item_link": "shopify:\/\/collections\/shower-steamers",
+              "item_image": "shopify:\/\/shop_images\/shower_b7018e00-6d25-402b-abf4-d5341188730f.png"
+            }
           }
         },
         "block_order": [
@@ -237,7 +245,8 @@
           "e0e332f6-46c0-4d1d-87db-424883ba831d",
           "273b74b1-a1b0-4ba8-891a-45c937620625",
           "06452597-35f5-4689-8a90-4100fbc89f4e",
-          "9f0a419b-67e3-44c8-b88e-2286135ee106"
+          "9f0a419b-67e3-44c8-b88e-2286135ee106",
+          "509ece59-2d82-4a34-9fce-c1988debe27a"
         ],
         "settings": {
           "top_ticker": "<div class=\"flex-list-item\">Free delivery in Toronto over $45 <a href=\"\/pages\/delivery-range\/\" class=\"flexlist-link\">[Learn More]<\/a>\n<\/div><div class=\"flex-list-item\">Curbside pick-up available<\/div><div class=\"flex-list-item\">Shipping all over Canada & the US<\/div>",
