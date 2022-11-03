@@ -115,6 +115,14 @@
             "collection_name": "<h3>Soy Candles<\/h3>",
             "collection_link": "shopify:\/\/collections\/soy-candles"
           }
+        },
+        "21a64ffa-3d98-4826-8bda-ae6e4d5fb321": {
+          "type": "slide",
+          "settings": {
+            "collection_image": "shopify:\/\/shop_images\/shower_b7018e00-6d25-402b-abf4-d5341188730f.png",
+            "collection_name": "Shower Steamers",
+            "collection_link": "shopify:\/\/collections\/shower-steamers"
+          }
         }
       },
       "block_order": [
@@ -128,7 +136,8 @@
         "slide8",
         "slide9",
         "slide10",
-        "bf067217-cbd2-459f-a009-9fd04d0ec8c2"
+        "bf067217-cbd2-459f-a009-9fd04d0ec8c2",
+        "21a64ffa-3d98-4826-8bda-ae6e4d5fb321"
       ],
       "settings": {
         "slider_title": "Discover our products"
