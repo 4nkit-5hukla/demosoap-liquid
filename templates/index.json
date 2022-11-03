@@ -128,7 +128,7 @@
           "type": "slide",
           "settings": {
             "collection_image": "shopify:\/\/shop_images\/zodiac.png",
-            "collection_name": "Zodiac",
+            "collection_name": "<h3>Zodiac<\/h3>",
             "collection_link": "shopify:\/\/collections\/zodiac"
           }
         }
