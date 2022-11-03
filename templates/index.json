@@ -123,6 +123,14 @@
             "collection_name": "Shower Steamers",
             "collection_link": "shopify:\/\/collections\/shower-steamers"
           }
+        },
+        "55cc5908-f2c2-4658-a3bf-5cd130fe0040": {
+          "type": "slide",
+          "settings": {
+            "collection_image": "shopify:\/\/shop_images\/zodiac.png",
+            "collection_name": "Zodiac",
+            "collection_link": "shopify:\/\/collections\/zodiac"
+          }
         }
       },
       "block_order": [
@@ -137,7 +145,8 @@
         "slide9",
         "slide10",
         "bf067217-cbd2-459f-a009-9fd04d0ec8c2",
-        "21a64ffa-3d98-4826-8bda-ae6e4d5fb321"
+        "21a64ffa-3d98-4826-8bda-ae6e4d5fb321",
+        "55cc5908-f2c2-4658-a3bf-5cd130fe0040"
       ],
       "settings": {
         "slider_title": "Discover our products"
