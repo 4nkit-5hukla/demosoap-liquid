@@ -118,7 +118,7 @@
     const toggleCart = $('.toggle-cart')
     const toggleCartQnty = toggleCart.find('.quantity')
     const cartClose = $('#cart-close')
-    const add2Cart = $('#add2cart')
+    const add2Cart = $('#add2cart,#add2cartd')
     const cartContent = flyingCart.find('.cart-content')
 
     const fetchCart = (addNewItem = false) => {
@@ -197,6 +197,7 @@
         data: { items },
         success: (data) => {
           fetchCart(true)
+         
         },
         error: (error)=> {
           console.log(error)

@@ -1,5 +1,8 @@
 (function ($) {
   $(document).ready(function () {
+    $('.update-cart-btn > button').click(function () {
+      window.location.reload();
+    })
     const searchBg = $('#search-bg')
     const searchBtn = $('#search-btn')
     const searchBox = $('#search')
@@ -9,7 +12,7 @@
     const megaMenuItem = $('#mega-menu .menu .item .link')
     const quantityButton = $('.quantity-selector .btn-quantity')
     const variantButtons = $('.variant-types .btn')
-    const add2Cart = $('#add2cart')
+    const add2Cart = $('#add2cart,#add2cartd')
     $(window).scroll(function () {
       const html = $('html'),
           header = $('header'),
@@ -112,6 +115,27 @@
       megaMenu.find('.preview-area img').attr('src', $(this).data('image'))
       $(this).addClass('active')
     })
+    
+    // const updateCart = (el) => {
+    //   $.ajax({
+    //     type: 'GET',
+    //     url: '/cart.js',
+    //     dataType: 'json',
+    //     success: (data) => {
+    //       console.log(data)
+    //       data.items.forEach((item) => {
+    //         const tmt = $("<span />", { class: "sub-total-amt" }).append(itemName).append(itemAmt)
+    //         const cartItem = $("<li />", { class: "cart-item" }).append(itemImage).append(itemContent)
+  
+    //       })
+    //      $('.sub-total-amt').text(data.total_price)
+    //     },
+    //     error: (error) => {
+    //       console.log(error)
+    //     }
+    //   })
+    // }
+
     quantityButton.click(function () {
       const quantityValue = $(this).parents('.quantity-selector').find('.quantity-value')
       const currentVal = parseInt(quantityValue.text())
@@ -119,11 +143,57 @@
         if(currentVal > 1){
           quantityValue.text(currentVal - 1)
           add2Cart.data('quantity', currentVal - 1)
+          if ($(this).parents('.cart-item-quantity').hasClass('cart-item-quantity')) {
+            const el = $(this)
+            const currentVariant  = $(this).data('var')
+            //const currentVariantPrice = $(this).data('price')
+            //const currAmt = (currentVariantPrice,Intl.NumberFormat('en-CA', { currency: 'CAD', minimumFractionDigits: 2, style: 'currency' }).format(parseFloat((currentVariantPrice * (currentVal - 1)) / 100)))
+            //console.log(currentVariantPrice,Intl.NumberFormat('en-CA', { currency: 'CAD', minimumFractionDigits: 2, style: 'currency' }).format(parseFloat((currentVariantPrice * (currentVal - 1)) / 100)))
+            //console.log(currentVal)
+            //console.log(currAmt)
+            $.ajax({
+              type: 'POST',
+              url: '/cart/change.js',
+              dataType: 'json',
+              data: {quantity: currentVal - 1, id: currentVariant },
+              success: (data) => {
+                console.log("Success")
+                //window.location.reload();
+              },
+              error: (error)=> {
+                console.log(error)
+              }
+            });
+         }
         }
       }else{
         quantityValue.text(currentVal + 1)
         add2Cart.data('quantity', currentVal + 1)
+        if ($(this).parents('.cart-item-quantity').hasClass('cart-item-quantity')) {
+          const el = $(this)
+          const currentVariant  = $(this).data('var')
+            //const currentVariantPrice = $(this).data('price')
+            //const currAmt = (currentVariantPrice,Intl.NumberFormat('en-CA', { currency: 'CAD', minimumFractionDigits: 2, style: 'currency' }).format(parseFloat((currentVariantPrice * (currentVal + 1)) / 100)))
+            //console.log(currentVariantPrice,Intl.NumberFormat('en-CA', { currency: 'CAD', minimumFractionDigits: 2, style: 'currency' }).format(parseFloat((currentVariantPrice * (currentVal - 1)) / 100)))
+            //console.log(currentVal)
+            //console.log(currAmt)
+            $.ajax({
+              type: 'POST',
+              url: '/cart/change.js',
+              dataType: 'json',
+              data: {quantity: currentVal + 1, id: currentVariant },
+              success: (data) => {
+                console.log("Success")
+                //window.location.reload();
+               
+              },
+              error: (error)=> {
+                console.log(error)
+              }
+            });
+       }
       }
+     
     })
     variantButtons.click(function () {
       const current = $(this)
