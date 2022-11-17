@@ -45,13 +45,13 @@
                       <div class="item-details">
                         <div class="details">
                           <p class="item-title">{{ item.product.title | escape }}</p>
-                          {%- if item.original_price != item.final_price -%}
+                          {%- if item.price != item.final_price -%}
                             <p class="price">
                               <span class="visually-hidden">
                                 {{ 'Regular Price ' }}
                               </span>
                               <s>
-                                {{- item.original_price | money -}}
+                                {{- item.price | money -}}
                               </s>
                               <span class="visually-hidden">
                                 {{ ' Sale Price ' }}
@@ -62,18 +62,18 @@
                             </p>
                           {%- else -%}
                             <p class="price">
-                              {{ 'Price ' }}<span>{{ item.original_price | money }}</span>
+                              {{ 'Price ' }}<span>{{ item.price | money }}</span>
                             </p>
                           {%- endif -%}
-                          <div class="quantity-selector">
+                          <div class="quantity-selector cart-item-quantity">
                   
-                            <button type="button" class="btn-quantity minus" aria-label="Quantity Minus">
+                            <button type="button" class="btn-quantity minus" aria-label="Quantity Minus" data-var="{{ item.variant_id }}" data-price="{{ item.price }}">
                               <svg xmlns="//www.w3.org/2000/svg" viewBox="0 0 19 2" fill="none">
                                 <rect x="18.5" y="0.5" width="1" height="18" rx="0.5" transform="rotate(90 18.5 0.5)" fill="#1E1E1E"></rect>
                               </svg>
                             </button>
-                            <span class="quantity-value">1</span>
-                            <button type="button" class="btn-quantity plus" aria-label="Quantity Plus">
+                            <span class="quantity-value">{{ item.quantity }}</span>
+                            <button type="button" class="btn-quantity plus" aria-label="Quantity Plus" data-var="{{ item.variant_id }}" data-price="{{ item.price }}">
                               <svg xmlns="//www.w3.org/2000/svg"
                                 viewBox="0 0 19 18" fill="none">
                                 <rect x="9" width="1" height="18" rx="0.5" fill="#1E1E1E"></rect>
@@ -98,7 +98,8 @@
                             </p>
                           {%- else -%}
                             <p class="subtotal">
-                              {{ 'Subtotal ' }}<span>{{ item.original_line_price | money }}</span>
+                              {{ 'Subtotal ' }}
+                              <span class="sub-total-amt">{{ item.original_line_price | money }}</span>
                             </p>
                           {%- endif -%}
                         </div>
@@ -114,6 +115,9 @@
                     </div>
                   </div>
                 {%- endfor -%}
+            </div>
+            <div class="update-cart-btn">
+              <button class="btn btn-demo-primary">Update Cart</button>
             </div>
           </div>
           <hr>
