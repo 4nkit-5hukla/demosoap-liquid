@@ -49,6 +49,31 @@
     <script src="{{ 'bootstrap.bundle.min.js' | asset_url }}" defer></script>
     <script src="{{ 'swiper-bundle.min.js' | asset_url }}" defer></script>
     <script src="{{ 'script.js' | asset_url }}" defer></script>
+    <script>
+      if (( cartItems.length >= 1 ) && (counter > 1)){
+     
+       let multiplier = 2 + counter
+      cartUpdates = { {{ variant_id }}: multiplier}
+       var params = {
+      type: 'POST',
+      url: '/cart/update.js',
+      data: { updates: cartUpdates },
+      dataType: 'json',
+      success: function(response) {        
+      let disp = multiplier*1.99
+        for (let j=0;  j<response.items.length; j++){
+         
+          if(response.items[j].handle  == 'test' ){
+             let el = $('tr[data-cart-item-key="'+ response.items[j].key + '"]')
+             
+             el.find("td:eq(3) span[data-cart-item-regular-price]").text(disp)
+          }
+        }
+      }
+    };
+
+    $.ajax(params);
+    </script>
     {{ content_for_header }}
   </head>
   <body>
