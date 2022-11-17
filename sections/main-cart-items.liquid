@@ -214,6 +214,7 @@
                           id="Quantity-{{ item.index | plus: 1 }}"
                           data-index="{{ item.index | plus: 1 }}"
                         >
+                <input id="quantity" min="1" type="number" name="quantity" id="quantity_{{ item.variant.id }}" value="{{ item.quantity }}" onfocus="this.select();" />
                         <button class="quantity__button no-js-hidden" name="plus" type="button">
                           <span class="visually-hidden">{{ 'products.product.quantity.increase' | t: product: item.product.title | escape }}</span>
                           {% render 'icon-plus' %}
