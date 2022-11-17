@@ -41,7 +41,6 @@
         {{ 'sections.cart.login.paragraph_html' | t: link: routes.account_login_url }}
       </p>
     {%- endif -%}
-    <a href="/cart/clear" class="btn button" style="margin-bottom:10px;">Empty cart</a>
   </div>
 
   <form action="{{ routes.cart_url }}" class="cart__contents critical-hidden" method="post" id="cart">
