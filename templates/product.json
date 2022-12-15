@@ -1,10 +1,29 @@
 {
   "sections": {
     "main": {
-      "type": "main-product"
+      "type": "main-product",
+      "settings": {
+      }
+    },
+    "16711402127ee3282a": {
+      "type": "apps",
+      "blocks": {
+        "1e28a633-9940-40c2-a669-479ffa436131": {
+          "type": "shopify:\/\/apps\/product-reviews-ugc-with-q-a\/blocks\/review-list\/34006358-52bd-4ec7-8c78-200fe58b77ba",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "1e28a633-9940-40c2-a669-479ffa436131"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "16711402127ee3282a"
   ]
 }
