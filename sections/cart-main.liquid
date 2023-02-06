@@ -28,6 +28,14 @@
             <div class="shopping-cart-data">
                 {%- for item in cart.items -%}
                   <div class="item-row d-flex flex-row" id="CartItem-{{ item.index | plus: 1 }}">
+                  <div class="remove-item">
+                          <a href="{{ item.url_to_remove }}" class="remove-btn">
+                            <svg xmlns="//www.w3.org/2000/svg" viewBox="0 0 26 26" fill="none">
+                              <rect x="18.7383" y="6.01044" width="1" height="18" rx="0.5" transform="rotate(45 18.7383 6.01044)" fill="#1E1E1E"></rect>
+                              <rect x="19.4453" y="18.7383" width="1" height="18" rx="0.5" transform="rotate(135 19.4453 18.7383)" fill="#1E1E1E"></rect>
+                            </svg>
+                          </a>
+                        </div>
                     {% if item.image %}
                       <a href="{{ item.url }}" class="item-meta">
                         <div class="item-image">
