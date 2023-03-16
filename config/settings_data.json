@@ -119,14 +119,6 @@
       "header": {
         "type": "header",
         "blocks": {
-          "2e83d92f-6dfb-4e60-b9e3-e4d1ed0b2881": {
-            "type": "mega_item",
-            "settings": {
-              "item_label": "Smudge",
-              "item_link": "shopify:\/\/collections\/smudge",
-              "item_image": "shopify:\/\/shop_images\/smudge.jpg"
-            }
-          },
           "63d6d933-85fd-46a7-b8cb-4ec50063e768": {
             "type": "mega_item",
             "settings": {
@@ -207,6 +199,14 @@
               "item_image": "shopify:\/\/shop_images\/skincare.jpg"
             }
           },
+          "2e83d92f-6dfb-4e60-b9e3-e4d1ed0b2881": {
+            "type": "mega_item",
+            "settings": {
+              "item_label": "Smudge",
+              "item_link": "shopify:\/\/collections\/smudge",
+              "item_image": "shopify:\/\/shop_images\/smudge.jpg"
+            }
+          },
           "d1596981-32ed-4413-b249-231314129610": {
             "type": "mega_item",
             "settings": {
@@ -249,7 +249,6 @@
           }
         },
         "block_order": [
-          "2e83d92f-6dfb-4e60-b9e3-e4d1ed0b2881",
           "63d6d933-85fd-46a7-b8cb-4ec50063e768",
           "27131a3b-64f5-4024-b832-1142352d3d48",
           "3264fb2a-9252-4f6f-9181-ea148fe9f01d",
@@ -260,6 +259,7 @@
           "d287530e-6cca-4aa7-a11a-cc4690bd2128",
           "cb2f1666-e51f-4b8a-b76d-63d8492184f4",
           "b6d9d3d3-ba3b-45d9-9a5e-19bedface92d",
+          "2e83d92f-6dfb-4e60-b9e3-e4d1ed0b2881",
           "d1596981-32ed-4413-b249-231314129610",
           "e0e332f6-46c0-4d1d-87db-424883ba831d",
           "273b74b1-a1b0-4ba8-891a-45c937620625",
