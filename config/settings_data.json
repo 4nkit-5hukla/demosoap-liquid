@@ -159,14 +159,6 @@
               "item_image": "shopify:\/\/shop_images\/treat.jpg"
             }
           },
-          "2e83d92f-6dfb-4e60-b9e3-e4d1ed0b2881": {
-            "type": "mega_item",
-            "settings": {
-              "item_label": "Smudge",
-              "item_link": "shopify:\/\/collections\/smudge",
-              "item_image": "shopify:\/\/shop_images\/smudge.jpg"
-            }
-          },
           "59489194-7361-4bd5-9578-16bdfcb40fdb": {
             "type": "mega_item",
             "settings": {
@@ -246,6 +238,14 @@
               "item_link": "shopify:\/\/collections\/gift",
               "item_image": "shopify:\/\/shop_images\/gift_686eeef8-d093-47c7-a608-ec66f71da6cd.jpg"
             }
+          },
+          "2e83d92f-6dfb-4e60-b9e3-e4d1ed0b2881": {
+            "type": "mega_item",
+            "settings": {
+              "item_label": "Smudge",
+              "item_link": "shopify:\/\/collections\/smudge",
+              "item_image": "shopify:\/\/shop_images\/smudge.jpg"
+            }
           }
         },
         "block_order": [
@@ -254,7 +254,6 @@
           "3264fb2a-9252-4f6f-9181-ea148fe9f01d",
           "1f3ffb37-92cd-4f82-bed3-9fbcb1827402",
           "23495f99-32ef-4406-a2a5-636ea681349f",
-          "2e83d92f-6dfb-4e60-b9e3-e4d1ed0b2881",
           "59489194-7361-4bd5-9578-16bdfcb40fdb",
           "509ece59-2d82-4a34-9fce-c1988debe27a",
           "d287530e-6cca-4aa7-a11a-cc4690bd2128",
@@ -264,7 +263,8 @@
           "e0e332f6-46c0-4d1d-87db-424883ba831d",
           "273b74b1-a1b0-4ba8-891a-45c937620625",
           "06452597-35f5-4689-8a90-4100fbc89f4e",
-          "9f0a419b-67e3-44c8-b88e-2286135ee106"
+          "9f0a419b-67e3-44c8-b88e-2286135ee106",
+          "2e83d92f-6dfb-4e60-b9e3-e4d1ed0b2881"
         ],
         "settings": {
           "top_ticker": "<div class=\"flex-list-item\">Free delivery in Toronto over $45 <a href=\"\/pages\/delivery-range\/\" class=\"flexlist-link\">[Learn More]<\/a>\n<\/div><div class=\"flex-list-item\">Curbside pick-up available<\/div><div class=\"flex-list-item\">Shipping all over Canada & the US<\/div>",
