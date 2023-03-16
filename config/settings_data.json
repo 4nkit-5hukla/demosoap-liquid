@@ -119,6 +119,14 @@
       "header": {
         "type": "header",
         "blocks": {
+          "2e83d92f-6dfb-4e60-b9e3-e4d1ed0b2881": {
+            "type": "mega_item",
+            "settings": {
+              "item_label": "Smudge",
+              "item_link": "shopify:\/\/collections\/smudge",
+              "item_image": "shopify:\/\/shop_images\/smudge.jpg"
+            }
+          },
           "63d6d933-85fd-46a7-b8cb-4ec50063e768": {
             "type": "mega_item",
             "settings": {
@@ -133,14 +141,6 @@
               "item_label": "Essentials",
               "item_link": "shopify:\/\/collections\/essentials",
               "item_image": "shopify:\/\/shop_images\/essentials_5c6bcdb0-6c35-4451-888a-484dd53247dc.jpg"
-            }
-          },
-          "2e83d92f-6dfb-4e60-b9e3-e4d1ed0b2881": {
-            "type": "mega_item",
-            "settings": {
-              "item_label": "Smudge",
-              "item_link": "shopify:\/\/collections\/smudge",
-              "item_image": "shopify:\/\/shop_images\/smudge.jpg"
             }
           },
           "3264fb2a-9252-4f6f-9181-ea148fe9f01d": {
@@ -249,9 +249,9 @@
           }
         },
         "block_order": [
+          "2e83d92f-6dfb-4e60-b9e3-e4d1ed0b2881",
           "63d6d933-85fd-46a7-b8cb-4ec50063e768",
           "27131a3b-64f5-4024-b832-1142352d3d48",
-          "2e83d92f-6dfb-4e60-b9e3-e4d1ed0b2881",
           "3264fb2a-9252-4f6f-9181-ea148fe9f01d",
           "1f3ffb37-92cd-4f82-bed3-9fbcb1827402",
           "23495f99-32ef-4406-a2a5-636ea681349f",
