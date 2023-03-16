@@ -9,7 +9,7 @@
             </div>
             <ul class="options">
               <li class="option"><a class="link" href="{{ routes.all_products_collection_url | escape }}">ALL PRODUCTS</a></li>
-              <li class="option"><a class="link" href="/collections/essentials/">Essentials</a></li>
+<!--               <li class="option"><a class="link" href="/collections/essentials/">Essentials</a></li>
               <li class="option"><a class="link" href="/collections/donut/">Donuts</a></li>
               <li class="option"><a class="link" href="/collections/bath-bomb/">Bath Bombs</a></li>
               <li class="option"><a class="link" href="/collections/treat/">Treats</a></li>
@@ -22,13 +22,12 @@
               <li class="option"><a class="link" href="/collections/beard/">Beard</a></li>
               <li class="option"><a class="link" href="/collections/shower-steamers/">Shower Steamers</a></li>
               <li class="option"><a class="link" href="/collections/zodiac/">Zodiac</a></li>
-              <li class="option"><a class="link" href="/collections/gift/">Gifts</a></li>
-            </ul>
-            <ul>
-  {% for collection in collections %}
-    <li><a href="{{ collection.url }}">{{ collection.title }}</a></li>
+              <li class="option"><a class="link" href="/collections/gift/">Gifts</a></li> -->
+              {% for collection in collections %}
+    <li class="option"><a class="link" href="{{ collection.url }}">{{ collection.title }}</a></li>
   {% endfor %}
-</ul>
+            </ul>
+           
 
           </div>
         </div>
