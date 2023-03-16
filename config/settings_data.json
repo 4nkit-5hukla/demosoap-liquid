@@ -151,20 +151,20 @@
               "item_image": "shopify:\/\/shop_images\/bath-bombs.jpg"
             }
           },
-          "23495f99-32ef-4406-a2a5-636ea681349f": {
-            "type": "mega_item",
-            "settings": {
-              "item_label": "Treats",
-              "item_link": "shopify:\/\/collections\/treat",
-              "item_image": "shopify:\/\/shop_images\/treat.jpg"
-            }
-          },
           "2e83d92f-6dfb-4e60-b9e3-e4d1ed0b2881": {
             "type": "mega_item",
             "settings": {
               "item_label": "Smudge",
               "item_link": "shopify:\/\/collections\/smudge",
               "item_image": "shopify:\/\/shop_images\/smudge.jpg"
+            }
+          },
+          "23495f99-32ef-4406-a2a5-636ea681349f": {
+            "type": "mega_item",
+            "settings": {
+              "item_label": "Treats",
+              "item_link": "shopify:\/\/collections\/treat",
+              "item_image": "shopify:\/\/shop_images\/treat.jpg"
             }
           },
           "59489194-7361-4bd5-9578-16bdfcb40fdb": {
@@ -253,8 +253,8 @@
           "27131a3b-64f5-4024-b832-1142352d3d48",
           "3264fb2a-9252-4f6f-9181-ea148fe9f01d",
           "1f3ffb37-92cd-4f82-bed3-9fbcb1827402",
-          "23495f99-32ef-4406-a2a5-636ea681349f",
           "2e83d92f-6dfb-4e60-b9e3-e4d1ed0b2881",
+          "23495f99-32ef-4406-a2a5-636ea681349f",
           "59489194-7361-4bd5-9578-16bdfcb40fdb",
           "509ece59-2d82-4a34-9fce-c1988debe27a",
           "d287530e-6cca-4aa7-a11a-cc4690bd2128",
