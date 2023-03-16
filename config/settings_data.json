@@ -119,6 +119,14 @@
       "header": {
         "type": "header",
         "blocks": {
+          "2e83d92f-6dfb-4e60-b9e3-e4d1ed0b2881": {
+            "type": "mega_item",
+            "settings": {
+              "item_label": "Smudge",
+              "item_link": "shopify:\/\/collections\/smudge",
+              "item_image": "shopify:\/\/shop_images\/smudge.jpg"
+            }
+          },
           "63d6d933-85fd-46a7-b8cb-4ec50063e768": {
             "type": "mega_item",
             "settings": {
@@ -238,17 +246,10 @@
               "item_link": "shopify:\/\/collections\/gift",
               "item_image": "shopify:\/\/shop_images\/gift_686eeef8-d093-47c7-a608-ec66f71da6cd.jpg"
             }
-          },
-          "2e83d92f-6dfb-4e60-b9e3-e4d1ed0b2881": {
-            "type": "mega_item",
-            "settings": {
-              "item_label": "Smudge",
-              "item_link": "shopify:\/\/collections\/smudge",
-              "item_image": "shopify:\/\/shop_images\/smudge.jpg"
-            }
           }
         },
         "block_order": [
+          "2e83d92f-6dfb-4e60-b9e3-e4d1ed0b2881",
           "63d6d933-85fd-46a7-b8cb-4ec50063e768",
           "27131a3b-64f5-4024-b832-1142352d3d48",
           "3264fb2a-9252-4f6f-9181-ea148fe9f01d",
@@ -263,8 +264,7 @@
           "e0e332f6-46c0-4d1d-87db-424883ba831d",
           "273b74b1-a1b0-4ba8-891a-45c937620625",
           "06452597-35f5-4689-8a90-4100fbc89f4e",
-          "9f0a419b-67e3-44c8-b88e-2286135ee106",
-          "2e83d92f-6dfb-4e60-b9e3-e4d1ed0b2881"
+          "9f0a419b-67e3-44c8-b88e-2286135ee106"
         ],
         "settings": {
           "top_ticker": "<div class=\"flex-list-item\">Free delivery in Toronto over $45 <a href=\"\/pages\/delivery-range\/\" class=\"flexlist-link\">[Learn More]<\/a>\n<\/div><div class=\"flex-list-item\">Curbside pick-up available<\/div><div class=\"flex-list-item\">Shipping all over Canada & the US<\/div>",
