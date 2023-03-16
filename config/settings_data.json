@@ -159,6 +159,14 @@
               "item_image": "shopify:\/\/shop_images\/treat.jpg"
             }
           },
+          "2e83d92f-6dfb-4e60-b9e3-e4d1ed0b2881": {
+            "type": "mega_item",
+            "settings": {
+              "item_label": "Smudge",
+              "item_link": "shopify:\/\/collections\/smudge",
+              "item_image": "shopify:\/\/shop_images\/smudge.jpg"
+            }
+          },
           "59489194-7361-4bd5-9578-16bdfcb40fdb": {
             "type": "mega_item",
             "settings": {
@@ -197,14 +205,6 @@
               "item_label": "Skincare",
               "item_link": "shopify:\/\/collections\/skincare",
               "item_image": "shopify:\/\/shop_images\/skincare.jpg"
-            }
-          },
-          "2e83d92f-6dfb-4e60-b9e3-e4d1ed0b2881": {
-            "type": "mega_item",
-            "settings": {
-              "item_label": "Smudge",
-              "item_link": "shopify:\/\/collections\/smudge",
-              "item_image": "shopify:\/\/shop_images\/smudge.jpg"
             }
           },
           "d1596981-32ed-4413-b249-231314129610": {
@@ -254,12 +254,12 @@
           "3264fb2a-9252-4f6f-9181-ea148fe9f01d",
           "1f3ffb37-92cd-4f82-bed3-9fbcb1827402",
           "23495f99-32ef-4406-a2a5-636ea681349f",
+          "2e83d92f-6dfb-4e60-b9e3-e4d1ed0b2881",
           "59489194-7361-4bd5-9578-16bdfcb40fdb",
           "509ece59-2d82-4a34-9fce-c1988debe27a",
           "d287530e-6cca-4aa7-a11a-cc4690bd2128",
           "cb2f1666-e51f-4b8a-b76d-63d8492184f4",
           "b6d9d3d3-ba3b-45d9-9a5e-19bedface92d",
-          "2e83d92f-6dfb-4e60-b9e3-e4d1ed0b2881",
           "d1596981-32ed-4413-b249-231314129610",
           "e0e332f6-46c0-4d1d-87db-424883ba831d",
           "273b74b1-a1b0-4ba8-891a-45c937620625",
