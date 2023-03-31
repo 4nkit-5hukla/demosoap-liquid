@@ -153,6 +153,13 @@
             "collection_name": "Moisturizing",
             "collection_link": "shopify:\/\/collections\/moisturizing-cream"
           }
+        },
+        "f13f9a41-f852-4708-90b0-1a9ac025a6c9": {
+          "type": "slide",
+          "settings": {
+            "collection_name": "Diffuser",
+            "collection_link": "shopify:\/\/collections\/diffuser"
+          }
         }
       },
       "block_order": [
@@ -171,7 +178,8 @@
         "55cc5908-f2c2-4658-a3bf-5cd130fe0040",
         "ee932db5-96aa-45ae-90f8-aee59e86ceb5",
         "ce7e93b0-7cba-424c-802e-4f3bca068227",
-        "21f0be58-6e32-4b2e-bc22-f2c8e0816604"
+        "21f0be58-6e32-4b2e-bc22-f2c8e0816604",
+        "f13f9a41-f852-4708-90b0-1a9ac025a6c9"
       ],
       "settings": {
         "slider_title": "Discover our products"
