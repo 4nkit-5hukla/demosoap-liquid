@@ -253,6 +253,13 @@
               "item_label": "Diffuser",
               "item_link": "shopify:\/\/collections\/diffuser"
             }
+          },
+          "15876bac-b22e-4c03-be2a-375a4e88b6c7": {
+            "type": "mega_item",
+            "settings": {
+              "item_label": "Bubble",
+              "item_link": "shopify:\/\/collections\/skincare"
+            }
           }
         },
         "block_order": [
@@ -272,7 +279,8 @@
           "273b74b1-a1b0-4ba8-891a-45c937620625",
           "06452597-35f5-4689-8a90-4100fbc89f4e",
           "9f0a419b-67e3-44c8-b88e-2286135ee106",
-          "8dc7d1a5-3602-44fd-bc99-03c6d9c87570"
+          "8dc7d1a5-3602-44fd-bc99-03c6d9c87570",
+          "15876bac-b22e-4c03-be2a-375a4e88b6c7"
         ],
         "settings": {
           "top_ticker": "<div class=\"flex-list-item\">Free delivery in Toronto over $45 <a href=\"\/pages\/delivery-range\/\" class=\"flexlist-link\">[Learn More]<\/a>\n<\/div><div class=\"flex-list-item\">Curbside pick-up available<\/div><div class=\"flex-list-item\">Shipping all over Canada & the US<\/div>",
