@@ -146,6 +146,13 @@
             "collection_name": "Bubble",
             "collection_link": "shopify:\/\/collections\/skincare"
           }
+        },
+        "21f0be58-6e32-4b2e-bc22-f2c8e0816604": {
+          "type": "slide",
+          "settings": {
+            "collection_name": "Moisturizing",
+            "collection_link": "shopify:\/\/collections\/moisturizing-cream"
+          }
         }
       },
       "block_order": [
@@ -163,7 +170,8 @@
         "21a64ffa-3d98-4826-8bda-ae6e4d5fb321",
         "55cc5908-f2c2-4658-a3bf-5cd130fe0040",
         "ee932db5-96aa-45ae-90f8-aee59e86ceb5",
-        "ce7e93b0-7cba-424c-802e-4f3bca068227"
+        "ce7e93b0-7cba-424c-802e-4f3bca068227",
+        "21f0be58-6e32-4b2e-bc22-f2c8e0816604"
       ],
       "settings": {
         "slider_title": "Discover our products"
