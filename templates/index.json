@@ -139,6 +139,13 @@
             "collection_name": "<h3>Smudge<\/h3>",
             "collection_link": "shopify:\/\/collections\/smudge"
           }
+        },
+        "ce7e93b0-7cba-424c-802e-4f3bca068227": {
+          "type": "slide",
+          "settings": {
+            "collection_name": "Bubble",
+            "collection_link": "shopify:\/\/collections\/skincare"
+          }
         }
       },
       "block_order": [
@@ -155,7 +162,8 @@
         "bf067217-cbd2-459f-a009-9fd04d0ec8c2",
         "21a64ffa-3d98-4826-8bda-ae6e4d5fb321",
         "55cc5908-f2c2-4658-a3bf-5cd130fe0040",
-        "ee932db5-96aa-45ae-90f8-aee59e86ceb5"
+        "ee932db5-96aa-45ae-90f8-aee59e86ceb5",
+        "ce7e93b0-7cba-424c-802e-4f3bca068227"
       ],
       "settings": {
         "slider_title": "Discover our products"
