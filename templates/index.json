@@ -82,6 +82,7 @@
         },
         "slide7": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "collection_name": "<h3>Skincare<\/h3>",
             "collection_link": "\/collections\/skincare\/"
