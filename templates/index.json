@@ -84,8 +84,9 @@
           "type": "slide",
           "disabled": true,
           "settings": {
-            "collection_name": "<h3>Skincare<\/h3>",
-            "collection_link": "\/collections\/skincare\/"
+            "collection_image": "shopify:\/\/shop_images\/EF29BE78-FA42-4500-B540-158983E58EBA.jpg",
+            "collection_name": "<h3>Beard<\/h3>",
+            "collection_link": "shopify:\/\/collections\/beard"
           }
         },
         "slide8": {
