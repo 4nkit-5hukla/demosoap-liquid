@@ -105,6 +105,7 @@
         "slide10": {
           "type": "slide",
           "settings": {
+            "collection_image": "shopify:\/\/shop_images\/429E047A-7089-438E-8EEF-A8F606B79E5A.jpg",
             "collection_name": "<h3 class=\"double-line-text\">Bath <span class=\"d-block\">Salts<\/span>\n<\/h3>",
             "collection_link": "\/collections\/bath-salts\/"
           }
