@@ -31,18 +31,8 @@
         "text",
         "button"
       ],
-      "disabled": true,
       "settings": {
         "image_left": "shopify:\/\/shop_images\/hero-left-lg.jpg"
-      }
-    },
-    "0d4550de-aaff-4535-afd3-8fdedd54b4a6": {
-      "type": "custom-liquid",
-      "settings": {
-        "custom_liquid": "<a href=\"https:\/\/demosoap.com\/collections\/all\"><img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0267\/5625\/1757\/files\/Green_And_White_Elegant_Christmas_Twitch_Banner.jpg\" style=\"width:100%; object-fit:contain\"\/><\/a>",
-        "color_scheme": "background-1",
-        "padding_top": 0,
-        "padding_bottom": 0
       }
     },
     "collection_slider": {
@@ -233,7 +223,6 @@
   },
   "order": [
     "home_hero",
-    "0d4550de-aaff-4535-afd3-8fdedd54b4a6",
     "collection_slider",
     "featured_products",
     "follow_us",
