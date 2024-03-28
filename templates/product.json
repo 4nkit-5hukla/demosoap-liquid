@@ -7,15 +7,47 @@
     },
     "16711402127ee3282a": {
       "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "17116412968d4c23e4": {
+      "type": "apps",
       "blocks": {
-        "1e28a633-9940-40c2-a669-479ffa436131": {
-          "type": "shopify:\/\/apps\/product-reviews-ugc-with-q-a\/blocks\/review-list\/34006358-52bd-4ec7-8c78-200fe58b77ba",
+        "seguno_reviews_review_list_T9FMMV": {
+          "type": "shopify:\/\/apps\/seguno-reviews\/blocks\/review_list\/a10c353e-1472-4621-ba04-289c48879459",
           "settings": {
+            "product": "{{product}}",
+            "product_exclusion_tag": "reviews-excluded,skip-review-request-email",
+            "reviews_per_page": 3,
+            "background_color": "",
+            "star_color": "#000000",
+            "text_color": "#000000",
+            "accent_color": "#000000",
+            "accent_text_color": "#ffffff",
+            "accent_button_color": "#ffffff",
+            "accent_button_text_color": "#000000"
+          }
+        },
+        "seguno_reviews_review_button_kk4ERr": {
+          "type": "shopify:\/\/apps\/seguno-reviews\/blocks\/review_button\/a10c353e-1472-4621-ba04-289c48879459",
+          "settings": {
+            "product": "{{product}}",
+            "product_exclusion_tag": "reviews-excluded,skip-review-request-email",
+            "content": "<p>We'd love to hear your feedback! Please share your thoughts with us directly by writing a review. Thanks!<\/p>",
+            "font_size": 18,
+            "alignment": "center",
+            "font_weight": true,
+            "accent_color": "#000000",
+            "accent_text_color": "#ffffff",
+            "button_color": "#000000",
+            "button_text_color": "#ffffff"
           }
         }
       },
       "block_order": [
-        "1e28a633-9940-40c2-a669-479ffa436131"
+        "seguno_reviews_review_list_T9FMMV",
+        "seguno_reviews_review_button_kk4ERr"
       ],
       "settings": {
         "include_margins": true
@@ -24,6 +56,7 @@
   },
   "order": [
     "main",
-    "16711402127ee3282a"
+    "16711402127ee3282a",
+    "17116412968d4c23e4"
   ]
 }

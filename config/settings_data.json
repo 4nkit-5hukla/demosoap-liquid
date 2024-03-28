@@ -325,22 +325,22 @@
 
     ],
     "blocks": {
-      "18218067344242134805": {
-        "type": "shopify:\/\/apps\/product-reviews-ugc-with-q-a\/blocks\/app\/34006358-52bd-4ec7-8c78-200fe58b77ba",
-        "disabled": false,
-        "settings": {
-        }
-      },
       "15683396631634586217": {
         "type": "shopify:\/\/apps\/inbox\/blocks\/chat\/841fc607-4181-4ad1-842d-e24d7f8bad6b",
         "disabled": false,
         "settings": {
           "button_color": "#000000",
           "button_icon": "chat_bubble",
+          "button_text": "chat_with_us",
           "button_horizontal_position": "bottom_right",
           "button_vertical_position": "lowest",
-          "button_text": "chat_with_us",
           "greeting_message": "👋 Hi, message us with any questions. We're happy to help!"
+        }
+      },
+      "18218067344242134805": {
+        "type": "shopify:\/\/apps\/hulk-product-reviews\/blocks\/app\/34006358-52bd-4ec7-8c78-200fe58b77ba",
+        "disabled": true,
+        "settings": {
         }
       }
     }
