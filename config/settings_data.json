@@ -492,5 +492,10 @@
         }
       }
     }
+  },
+  "platform_customizations": {
+    "custom_css": [
+      ".product-listing .side-bar {transform: none !important;}"
+    ]
   }
 }
