@@ -496,7 +496,7 @@
   "platform_customizations": {
     "custom_css": [
       ".product-listing .side-bar {transform: none !important;}",
-      ".btn-swiper.next-icon.swiper-button-disabled {opacity: 0.3;}"
+      ".btn-swiper.swiper-button-disabled {opacity: 0.3;}"
     ]
   }
 }
