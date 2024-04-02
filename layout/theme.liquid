@@ -49,34 +49,7 @@
     <script src="{{ 'bootstrap.bundle.min.js' | asset_url }}" defer></script>
     <script src="{{ 'swiper-bundle.min.js' | asset_url }}" defer></script>
     <script src="{{ 'script.js' | asset_url }}" defer></script>
-    <script>
-  $(document).ready(function() {
-    $('#newsletter-form').submit(function(event) {
-      event.preventDefault(); // Prevent default form submission
-
-      // Serialize form data
-      var formData = $(this).serialize();
-
-      // Send form data via AJAX
-      $.ajax({
-        type: $(this).attr('method'),
-        url: $(this).attr('action'),
-        data: formData,
-        success: function(response) {
-          // Handle successful form submission
-          // You can display a success message or perform any other actions
-          console.log('Form submitted successfully');
-          // Clear form fields if needed
-          $('#newsletter-form')[0].reset();
-        },
-        error: function(jqXHR, textStatus, errorThrown) {
-          // Handle form submission errors
-          console.error('Form submission failed:', errorThrown);
-        }
-      });
-    });
-  });
-</script>
+ 
     
     {{ content_for_header }}
   </head>
