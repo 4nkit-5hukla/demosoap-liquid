@@ -292,7 +292,7 @@
           "02f31d33-24e7-4cb7-97af-7fea526740ba"
         ],
         "settings": {
-          "top_ticker": "<div class=\"flex-list-item\">Free delivery in Toronto over $45 <a href=\"\/pages\/delivery-range\/\" class=\"flexlist-link\">[Learn More]<\/a>\n<\/div><div class=\"flex-list-item\">Curbside pick-up available<\/div><div class=\"flex-list-item\">Shipping all over Canada & the US<\/div>",
+          "top_ticker": "<div class=\"flex-list-item\">Free delivery in Toronto over $45 \n<\/div><div class=\"flex-list-item\">Curbside pick-up available<\/div><div class=\"flex-list-item\">Shipping all over Canada & the US<\/div>",
           "menu": "main-menu"
         }
       },
